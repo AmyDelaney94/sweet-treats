@@ -1,3 +1,6 @@
+'''
+    Documenting imports at beginning of file
+'''
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
@@ -7,6 +10,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    '''
+        Model for creating Posts
+    '''
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -22,16 +28,30 @@ class Post(models.Model):
         User, related_name='blogpost_like', blank=True)
 
     class Meta:
+        '''
+            Class for ordering posts from new to old
+        '''
+
         ordering = ["-created_on"]
 
     def __str__(self):
+        '''
+            Method used to return title
+        '''
         return self.title
 
     def number_of_likes(self):
+        '''
+            Method used to return number of likes
+        '''
         return self.likes.count()
 
 
 class Comment(models.Model):
+    '''
+        Model for creating comments
+    '''
+
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
@@ -41,6 +61,9 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
+        '''
+            Used to show posts in order of creation similar to a conversation.
+        '''
         ordering = ["created_on"]
 
     def __str__(self):
