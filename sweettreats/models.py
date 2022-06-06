@@ -29,7 +29,7 @@ class Post(models.Model):
 
     class Meta:
         '''
-            Class for ordering posts from new to old
+            Class for ordering posts in decending order
         '''
 
         ordering = ["-created_on"]
@@ -62,7 +62,7 @@ class Comment(models.Model):
 
     class Meta:
         '''
-            Used to show posts in order of creation similar to a conversation.
+            Used to show posts in ascending order
         '''
         ordering = ["created_on"]
 
