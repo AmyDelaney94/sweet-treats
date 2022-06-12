@@ -106,13 +106,13 @@ body {
     color: lightgray;
 }
 
-.btn-signup {
+.btn-register {
     background-color: #23BBBB;
     color: #fff;
 }
 
-.btn-signup:hover,
-.btn-signup:active {
+.btn-register:hover,
+.btn-register:active {
     background-color: #fff;
     color: #23BBBB;
 }
