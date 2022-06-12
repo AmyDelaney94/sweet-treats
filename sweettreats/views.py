@@ -1,8 +1,9 @@
 '''
     Documenting inports at top of file.
 '''
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 
@@ -79,3 +80,20 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+
+class PostLike(View):
+    '''
+        Code to allow users to like posts
+    '''
+    def post(self, request, slug, *args, **kwargs):
+        '''
+            This method displays like status
+        '''
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('posts', args=[slug]))
