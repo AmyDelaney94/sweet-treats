@@ -9,10 +9,6 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
-
 .thin {
     font-weight: 300;
 }
@@ -139,4 +135,12 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+/* Creating Posts */
+.recipe-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 65px;
+    color: #465362;
 }

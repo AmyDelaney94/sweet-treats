@@ -1,16 +1,17 @@
 '''
     Documenting inports at top of file.
 '''
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+# from django.views.generic.edit import UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, CreationForm
 
 
 class PostList(generic.ListView):
     '''
-        Code block used to format post layout on main page
+        View to show all recipe posts on page
     '''
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -20,7 +21,7 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
     '''
-        Code block used to display posts on main page
+        View used to display selected posts
     '''
     def get(self, request, slug, *args, **kwargs):
         '''
@@ -97,3 +98,29 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('posts', args=[slug]))
+
+
+def createposts(request):
+    '''
+    Alows user to share and post a recipe
+    '''
+    posts_form = CreationForm(request.POST or None, request.FILES or None)
+    context = {
+        'posts_form': posts_form,
+    }
+
+    if request.method == "POST":
+        posts_form = CreationForm(request.POST, request.FILES)
+        if posts_form.is_valid():
+            print('valid')
+            posts_form.instance.author = request.user
+            posts_form.instance.status = 1
+            posts = posts_form.save(commit=False)
+
+            posts.save()
+            return redirect('index')
+        else:
+            print('invalid')
+    else:
+        posts_form = CreationForm()
+    return render(request, "create_posts.html", context)

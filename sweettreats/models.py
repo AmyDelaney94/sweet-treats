@@ -21,7 +21,7 @@ class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    prepatation_time = models.CharField(max_length=30, default=0)
+    preparation_time = models.CharField(max_length=30, default=0)
     serving_size = models.CharField(max_length=30, default=0)
     ingredients = models.TextField(blank=True)
     instructions = models.TextField(blank=True)
@@ -34,7 +34,6 @@ class Post(models.Model):
         '''
             Class for ordering posts in decending order
         '''
-
         ordering = ["-created_on"]
 
     def __str__(self):
@@ -45,7 +44,7 @@ class Post(models.Model):
 
     def number_of_likes(self):
         '''
-            Method used to return number of likes
+            Method used to return total count of likes on a recipe
         '''
         return self.likes.count()
 
