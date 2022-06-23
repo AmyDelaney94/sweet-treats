@@ -127,7 +127,7 @@ def createposts(request):
     return render(request, "create_posts.html", context)
 
 
-class UpdateRecipe(UpdateView):
+class UpdatePost(UpdateView):
     '''
     View to update a recipe
     '''
@@ -136,7 +136,7 @@ class UpdateRecipe(UpdateView):
     form_class = CreationForm
 
 
-class DeleteRecipe(DeleteView):
+class DeletePost(DeleteView):
     '''
     View to delete a recipe
     '''

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{%block content %}
+{% load crispy_forms_tags %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                <h1 class="detail-title">{{ posts.title }}</h1>
+                <div class="col-sm-12 col-md-12">
+                    <div class="detail-image-box mb-4">
+                        <div>
+                            {% if "placeholder" in posts.featured_image.url %}
+                            <img class="card-img-top"
+                                src="#"
+                                alt="cupcake">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ posts.featured_image.url }}" alt="{{ posts.title }}">
+                            {% endif %}
+                        </div>
+                        <div class="card-upload">
+                            <p class="detail-image-text">
+                                Uploaded by: {{ posts.author }}
+                            </p>
+                            <p class="detail-image-text-2">{{ posts.created_on }}</p>
+                            <div class="recipe_like">
+                                {% if user.is_authenticated %}
+                                <form action="{% url 'posts_like' posts.slug %}" class="d-inline" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+
+                                    <button type="submit" name="recipe_id" value="{{posts.slug}}" class="btn-like"><i
+                                            class="fas fa-heart"></i></button>
+
+                                    {% else %}
+
+                                    <button type="submit" name="recipe_id" value="{{posts.slug}}" class="btn-like"><i
+                                            class="far fa-heart"></i></button>
+
+                                    {% endif %}
+                                </form>
+                                {% else %}
+
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <span class="text-seconday"> {{ posts.number_of_likes }}</span>
+                            </div>
+                        </div>
+                        <div>
+                            {% if user.is_authenticated and user.id == posts.author.id %}
+                            <a class="btn crud-btn" href="{% url 'update_post' posts.slug %}" role="button">Edit</a>
+                            <a class="btn crud-btn" href="{% url 'delete_post' posts.slug %}"
+                                role="button">Delete</i></a>
+                            {% else %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="comment-section">
+                        <div class="recipe-comment">
+
+                            {% if commented %}
+                            <div class="alert alert-success" role="alert">
+                                Your comment has been published!
+                            </div>
+                            {% else %}
+
+                            {% if user.is_authenticated %}
+
+                            <h3 class="comment-title">Your comment here:</h3>
+                            <p class="comment-user">User: {{ user.username }}</p>
+                            <form method="post" style="margin-top: 1.3em;">
+                                {{ comment_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-signup btn-lg comment-submit">Submit</button>
+                            </form>
+                            {% endif %}
+                            {% endif %}
+
+                        </div>
+                        <h3 class="comment-title">Comments:</h3>
+                        <div class="card-body public-comments">
+                            {% for comment in comments %}
+                            <div class="comments">
+                                <p class="commented-user">
+                                    <!-- The commenter's name goes here.-->
+                                    {{ comment.name }}
+                                </p>
+                                <p class="user-comment">
+                                    {{ comment.body | linebreaks }}
+                                </p>
+                            </div>
+                            <!-- for loop ends here -->
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="recipe-detail-info">
+                        <div class="container-fluid">
+                            <div>
+                                <div class="col-12 mt-3 center">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div>
+                                                <div class="servings">
+                                                    <h4 class="serving-title">Portions</h4>
+                                                    <h5 class="serving-portions"> Serves: {{ posts.serving_size }}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                            <div class="detail-times">
+                                                <h4 class="recipe-time-title">Preparation</h4>
+                                                <h5 class="prep-time"> Prepation time: {{ posts.preparation_time }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="recipe-titles">
+                            <h4 class="ingredients-heading">Ingredients</h4>
+                            <p class="ingredients">{{ posts.ingredients|safe }}</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4 class="instructions-heading">Instructions</h4>
+                            <p class="instructions">{{ posts.instructions|safe }}</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
