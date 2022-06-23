@@ -25,8 +25,8 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     preparation_time = models.CharField(max_length=30, default=0)
     serving_size = models.CharField(max_length=30, default=0)
-    ingredients = models.TextField(blank=True)
-    instructions = models.TextField(blank=True)
+    ingredients = models.TextField(blank=False)
+    instructions = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
@@ -56,8 +56,8 @@ class Post(models.Model):
         return super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        """Tells Django to go to recipe_detail.html"""
-        return reverse("recipe_detail", kwargs={"slug": self.slug})
+        """Tells Django to go to posts.html"""
+        return reverse("posts", kwargs={"slug": self.slug})
 
 
 class Comment(models.Model):

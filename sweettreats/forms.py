@@ -27,7 +27,7 @@ class CreationForm(forms.ModelForm):
         Available fields for recipe creation.
         """
         model = Post
-        fields = [
+        fields = (
             'title',
             'author',
             'preparation_time',
@@ -35,7 +35,7 @@ class CreationForm(forms.ModelForm):
             'ingredients',
             'instructions',
             'featured_image',
-        ]
+        )
 
         widgets = {
             'ingredients': SummernoteWidget(),
