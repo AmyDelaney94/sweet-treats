@@ -3,7 +3,8 @@
 '''
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-# from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, CreationForm
@@ -124,3 +125,21 @@ def createposts(request):
     else:
         posts_form = CreationForm()
     return render(request, "create_posts.html", context)
+
+
+class UpdateRecipe(UpdateView):
+    '''
+    View to update a recipe
+    '''
+    model = Post
+    template_name = 'update_post.html'
+    form_class = CreationForm
+
+
+class DeleteRecipe(DeleteView):
+    '''
+    View to delete a recipe
+    '''
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('user_recipes')

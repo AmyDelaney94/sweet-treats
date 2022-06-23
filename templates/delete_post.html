@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid delete-text">
+    <h3 class="delete-heading">Delete {{ post.title }}</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div class="delete-p">
+            <p>Are you sure you want to delete "{{ post.title }}"?</p>
+            <p>All data of this recipe will be permanently deleted. </p>
+        </div>
+        <input type="submit" value="Confirm">
+    </form>
+</div>
+
+{% endblock %}
