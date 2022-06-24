@@ -44,7 +44,8 @@ class PostDetail(View):
                "comments": comments,
                "commented": False,
                "liked": liked,
-               "comment_form": CommentForm()
+               "comment_form": CommentForm(),
+               "creation_form": CreationForm()
             },
         )
 
@@ -63,7 +64,6 @@ class PostDetail(View):
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = post
@@ -101,30 +101,27 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('posts', args=[slug]))
 
 
-def createposts(request):
+def posts_create(request):
     '''
-    Alows user to share and post a recipe
+        This displays the recipies posted by users.
     '''
-    posts_form = CreationForm(request.POST or None, request.FILES or None)
-    context = {
-        'posts_form': posts_form,
-    }
-
     if request.method == "POST":
         posts_form = CreationForm(request.POST, request.FILES)
         if posts_form.is_valid():
-            print('valid')
+            # creates a new recipe and adds it to the database.
             posts_form.instance.author = request.user
             posts_form.instance.status = 1
             posts = posts_form.save(commit=False)
-
             posts.save()
             return redirect('index')
+
         else:
-            print('invalid')
-    else:
-        posts_form = CreationForm()
-    return render(request, "create_posts.html", context)
+            # displays a blank form to be completed
+            posts_form = CreationForm()
+
+        return render(request,
+                      "create_posts.html",
+                      {'posts_form': posts_form})
 
 
 class UpdatePost(UpdateView):

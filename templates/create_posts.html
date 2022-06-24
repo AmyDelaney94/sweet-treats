@@ -3,49 +3,17 @@
 {% block content %}
 
 <div class="container-fluid">
-    <h1 class="recipe-heading">Create a recipe here!</h1>
+    <h1 class="recipe-heading">Create Your Recipe Here!</h1>
 </div>
 
 {% if user.is_authenticated %}
-<div class="container-fluid">
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col">
-                    {% csrf_token %}
-                    <div class="row">
-                        {{ posts_form.title | as_crispy_field | safe }}
-                    </div>
-                    <div class="row">
-                        {{ posts_form.preparation_time | as_crispy_field | safe }}
-                    </div>
-                    <div class="row">
-                        {{ posts_form.serving_size | as_crispy_field | safe }}
-                    </div>
-                    <div class="row">
-                        {{ posts_form.ingredients | as_crispy_field | safe }}
-                    </div>
-                    <div class="row">
-                        {{ posts_form.instructions | as_crispy_field | safe }}
-                    </div>
-                    <div class="row">
-                        {{ posts_form.featured_image | as_crispy_field | safe }}
-                        <p>A placeholder image will be provided if one is not selected.</p>
-                    </div>
-                    <button type="submit" class="btn btn-register submit-btn">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-{% else %}
-<div class="container-fluid">
-    <div class="create-login-text">
-        <h1 class="create-login-heading">Oopps!</h1>
-        <p class="create-login-p">It looks like you aren't logged in yet.</p>
-        <p class="create-login-p">Please click log in or register to share recipes!</p>
-    </div>
-</div>
+<h3> Create a Recipe Here!</h3>
+<p>Posting as: {{ user.username }}</p>
+<form method="post" style="margin-top: 1.3em;">
+    {{ creation_form | crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-register btn-lg">Submit</button>
+</form>
 {% endif %}
 
 {% endblock %}
