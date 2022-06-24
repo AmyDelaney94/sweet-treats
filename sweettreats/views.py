@@ -101,27 +101,40 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('posts', args=[slug]))
 
 
-def create_posts(request):
+class PostCreate(View):
     '''
-        This displays the recipies posted by users.
+        This class allows users to create posts.
     '''
-    if request.method == "POST":
-        posts_form = CreationForm(request.POST or None, request.FILES or None)
-        if posts_form.is_valid():
-            # creates a new recipe and adds it to the database.
-            posts_form.instance.author = request.user
-            posts_form.instance.status = 1
-            posts = posts_form.save(commit=False)
-            posts.save()
-            return redirect('index')
+    model = Post
+    form_class = CreationForm
 
-        else:
-            # displays a blank form to be completed
-            posts_form = CreationForm()
+    def form_valid(self, form):
+        """ Sets user as author of post """
+        form.instance.author = self.request.user
+        return super().form_class(form)
 
-        return render(request,
-                      "create_posts.html",
-                      {'posts_form': posts_form})
+
+# def create_posts(request):
+#     '''
+#         This displays the recipies posted by users.
+#     '''
+#     if request.method == "POST":
+#         posts_form = CreationForm(request.POST, request.FILES)
+#         if posts_form.is_valid():
+#             # creates a new recipe and adds it to the database.
+#             posts_form.instance.author = request.user
+#             posts_form.instance.status = 1
+#             posts = posts_form.save(commit=False)
+#             posts.save()
+#             return redirect('index')
+
+#         else:
+#             # displays a blank form to be completed
+#             posts_form = CreationForm()
+
+#         return render(request,
+#                       "create_posts.html",
+#                       {'posts_form': posts_form})
 
 
 class UpdatePost(UpdateView):

@@ -21,7 +21,6 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="recipes"
     )
     featured_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     preparation_time = models.CharField(max_length=30, default=0)
     serving_size = models.CharField(max_length=30, default=0)
