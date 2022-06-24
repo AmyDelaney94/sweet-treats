@@ -101,12 +101,12 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('posts', args=[slug]))
 
 
-def posts_create(request):
+def create_posts(request):
     '''
         This displays the recipies posted by users.
     '''
     if request.method == "POST":
-        posts_form = CreationForm(request.POST, request.FILES)
+        posts_form = CreationForm(request.POST or None, request.FILES or None)
         if posts_form.is_valid():
             # creates a new recipe and adds it to the database.
             posts_form.instance.author = request.user
