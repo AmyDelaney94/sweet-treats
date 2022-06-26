@@ -7,10 +7,10 @@ from . import views
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
+    path('create_posts/', views.create_posts, name='create_posts'),
+    path('about/', views.about, name='about'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='posts'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='posts_like'),
-    path('create_posts', views.PostCreate.as_view(), name='create_posts'),
-    path('about', views.about_us, name='about'),
     path(
         'update_post/<slug:slug>',
         views.UpdatePost.as_view(),

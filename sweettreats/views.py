@@ -1,12 +1,13 @@
 '''
     Documenting imports for comments and post views.
 '''
-from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import View, CreateView, ListView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.views.generic import View, ListView
+# from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm, CreationForm
 
@@ -39,7 +40,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "posts.html",
             {
                 "post": post,
                 "comments": comments,
@@ -102,17 +103,35 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('posts', args=[slug]))
 
 
-class PostCreate(LoginRequiredMixin, CreateView):
-    '''
-        This class allows users to create posts if they are logged in.
-    '''
-    model = Post
-    form_posts = CreationForm
+# class PostCreate(CreateView):
+#     '''
+#         This class allows users to create posts if they are logged in.
+#     '''
+#     model = Post
+#     form_class = CreationForm
 
-    def form_valid(self, form):
-        """ Sets user as author of post """
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+#     def form_valid(self, form):
+#         """ Sets user as author of post """
+#         form.instance.author = self.request.user
+#         return super().form_valid(form)
+
+
+def create_posts(request):
+    """ View to display Create a Recipe Page """
+    if request.method == 'POST':
+        recipe_form = CreationForm(request.POST, request.FILES)
+        if recipe_form.is_valid():
+            recipe_form.save()
+            messages.success(request, 'Recipe Shared Successfully')
+            return redirect('posts.html')
+    else:
+        recipe_form = CreationForm(instance=request.user)
+
+    context = {
+        'recipe_form': recipe_form
+    }
+
+    return render(request, "create_posts.html", context)
 
 
 class UpdatePost(UpdateView):
@@ -133,6 +152,6 @@ class DeletePost(DeleteView):
     success_url = reverse_lazy('user_recipes')
 
 
-def about_us(request):
+def about(request):
     """ View to display About Us Page """
     return render(request, "about.html")

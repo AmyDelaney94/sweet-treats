@@ -7,7 +7,7 @@
 </div>
 
 {% if user.is_authenticated %}
-<h3> Create a Recipe Here!</h3>
+<!-- <h3> Create a Recipe Here!</h3> -->
 <p>Posting as: {{ user.username }}</p>
 <form method="post" style="margin-top: 1.3em;">
     {{ creation_form | crispy }}
