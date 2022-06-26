@@ -1,8 +1,9 @@
 '''
-    Documenting inports at top of file.
+    Documenting imports for comments and post views.
 '''
-from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views import generic, View
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views.generic import View, CreateView, ListView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
@@ -10,7 +11,7 @@ from .models import Post
 from .forms import CommentForm, CreationForm
 
 
-class PostList(generic.ListView):
+class PostList(ListView):
     '''
         View to show all recipe posts on page
     '''
@@ -101,40 +102,17 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('posts', args=[slug]))
 
 
-class PostCreate(View):
+class PostCreate(LoginRequiredMixin, CreateView):
     '''
-        This class allows users to create posts.
+        This class allows users to create posts if they are logged in.
     '''
     model = Post
-    form_class = CreationForm
+    form_posts = CreationForm
 
     def form_valid(self, form):
         """ Sets user as author of post """
         form.instance.author = self.request.user
-        return super().form_class(form)
-
-
-# def create_posts(request):
-#     '''
-#         This displays the recipies posted by users.
-#     '''
-#     if request.method == "POST":
-#         posts_form = CreationForm(request.POST, request.FILES)
-#         if posts_form.is_valid():
-#             # creates a new recipe and adds it to the database.
-#             posts_form.instance.author = request.user
-#             posts_form.instance.status = 1
-#             posts = posts_form.save(commit=False)
-#             posts.save()
-#             return redirect('index')
-
-#         else:
-#             # displays a blank form to be completed
-#             posts_form = CreationForm()
-
-#         return render(request,
-#                       "create_posts.html",
-#                       {'posts_form': posts_form})
+        return super().form_valid(form)
 
 
 class UpdatePost(UpdateView):
