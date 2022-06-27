@@ -3,7 +3,6 @@
 '''
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import View, ListView
-# from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
@@ -103,26 +102,15 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('posts', args=[slug]))
 
 
-# class PostCreate(CreateView):
-#     '''
-#         This class allows users to create posts if they are logged in.
-#     '''
-#     model = Post
-#     form_class = CreationForm
-
-#     def form_valid(self, form):
-#         """ Sets user as author of post """
-#         form.instance.author = self.request.user
-#         return super().form_valid(form)
-
-
 def create_posts(request):
     """ View to display Create a Recipe Page """
     if request.method == 'POST':
         recipe_form = CreationForm(request.POST, request.FILES)
         if recipe_form.is_valid():
             recipe_form.save()
-            messages.success(request, 'You recipe has been sent for approval.')
+            messages.success(
+                request, 'Your recipe has been sent for approval.'
+                )
             return redirect(reverse('home'))
     else:
         recipe_form = CreationForm()

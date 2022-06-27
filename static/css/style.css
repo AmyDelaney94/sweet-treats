@@ -153,4 +153,12 @@ body {
     text-align: center;
 } */
 
+/* About Us Page */
+.about-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 65px;
+    color: #465362;
+}
+
 
