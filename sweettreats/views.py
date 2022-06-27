@@ -123,15 +123,15 @@ def create_posts(request):
         if recipe_form.is_valid():
             recipe_form.save()
             messages.success(request, 'Recipe Shared Successfully')
-            return HttpResponseRedirect('posts.html')
+            return redirect(reverse('home'))
     else:
         recipe_form = CreationForm()
 
-    # context = {
-    #     'recipe_form': recipe_form
-    # }
+    context = {
+        'recipe_form': recipe_form
+    }
 
-    return render(request, "create_posts.html")
+    return render(request, "create_posts.html", context)
 
 
 class UpdatePost(UpdateView):

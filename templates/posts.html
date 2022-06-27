@@ -66,9 +66,18 @@
         <div class="col">
             <hr>
         </div>
-    </div>
+    </div>  
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-6 card mb-4  mt-3 ">
+            <h3>Recipe Details:</h3>
+            <div class="card-body">
+                    <p><strong>Preparation Time: </strong>{{ post.preparation_time | safe }}</p>
+                    <p><strong>Serving Size: </strong> {{ post.serving_size | safe }}</p>
+                    <p><strong>Ingredients: </strong> {{ post.ingredients | safe }}</p>
+                    <p><strong>Instructions: </strong> {{ post.instructions | safe }}</p>
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
@@ -114,7 +123,7 @@
             <a class="btn crud-btn" href="{% url 'update_post' posts.slug %}" role="button">Edit</a>
             <a class="btn crud-btn" href="{% url 'delete_post' posts.slug %}" role="button">Delete</i></a>
             {% else %}
-            <p>Please login to update or delete your posts!</p>
+            <p>Please login if you want to update or delete your posts!</p>
             {% endif %}
         </div>
     </div>
