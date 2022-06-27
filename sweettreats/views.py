@@ -122,7 +122,7 @@ def create_posts(request):
         recipe_form = CreationForm(request.POST, request.FILES)
         if recipe_form.is_valid():
             recipe_form.save()
-            messages.success(request, 'Recipe Shared Successfully')
+            messages.success(request, 'You recipe has been sent for approval.')
             return redirect(reverse('home'))
     else:
         recipe_form = CreationForm()
