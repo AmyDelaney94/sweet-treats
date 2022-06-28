@@ -29,7 +29,6 @@ class CreationForm(forms.ModelForm):
         model = Post
         fields = (
             'title',
-            'author',
             'preparation_time',
             'serving_size',
             'ingredients',
