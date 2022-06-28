@@ -121,9 +121,9 @@
             </div>
         </div>
         <div>
-            {% if user.is_authenticated and user.id == posts.author.id %}
-            <a class="btn crud-btn" href="{% url 'update_post' posts.slug %}" role="button">Edit</a>
-            <a class="btn crud-btn" href="{% url 'delete_post' posts.slug %}" role="button">Delete</i></a>
+            {% if user.is_authenticated and user.id == post.author.id %}
+            <a class="btn user-btn" aria-label="Update your Post" href="{% url 'update_post' post.slug %}" role="button">Edit</a>
+            <a class="btn user-btn" aria-label="Delete your Post" href="{% url 'delete_post' post.slug %}" role="button">Delete</i></a>
             {% else %}
             <p>Please login if you want to update or delete your posts!</p>
             {% endif %}

@@ -19,12 +19,38 @@ class CommentForm(forms.ModelForm):
 
 
 class CreationForm(forms.ModelForm):
-    """
+    '''
     Form class to add a recipe
-    """
+    '''
+    class Meta:
+        '''
+        Using Post model, choose fields to update.
+        '''
+        model = Post
+        fields = (
+            'title',
+            'author',
+            'preparation_time',
+            'serving_size',
+            'ingredients',
+            'instructions',
+            'featured_image',
+        )
+
+        widgets = {
+            'ingredients': SummernoteWidget(),
+            'instructions': SummernoteWidget(),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(CreationForm, self).__init__(*args, **kwargs)
+
+
+class UpdateRecipeForm(forms.ModelForm):
+    """ Update a Post Form """
     class Meta:
         """
-        Available fields for recipe creation.
+        Get post model, choose fields to update and add summernote widget
         """
         model = Post
         fields = (
@@ -40,6 +66,3 @@ class CreationForm(forms.ModelForm):
             'ingredients': SummernoteWidget(),
             'instructions': SummernoteWidget(),
         }
-
-    def __init__(self, *args, **kwargs):
-        super(CreationForm, self).__init__(*args, **kwargs)

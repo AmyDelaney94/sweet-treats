@@ -161,4 +161,15 @@ body {
     color: #465362;
 }
 
+/* Update and Delete Posts */
+.user-btn{
+    color: #fff;
+    background-color: #23BBBB;
+    display:inline-block
+}
+
+.delete {
+    color: #fff;
+    background-color: #f70909;
+}
 

@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Post
-from .forms import CommentForm, CreationForm
+from .forms import CommentForm, CreationForm, UpdateRecipeForm
 
 
 class PostList(ListView):
@@ -124,11 +124,11 @@ def create_posts(request):
 
 class UpdatePost(UpdateView):
     '''
-    View to update a recipe
+    View to update a recipe if user is logged in.
     '''
     model = Post
     template_name = 'update_post.html'
-    form_class = CreationForm
+    form_class = UpdateRecipeForm
 
 
 class DeletePost(DeleteView):
@@ -137,7 +137,7 @@ class DeletePost(DeleteView):
     '''
     model = Post
     template_name = 'delete_post.html'
-    success_url = reverse_lazy('user_recipes')
+    success_url = reverse_lazy('home')
 
 
 def about(request):

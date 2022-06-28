@@ -10,7 +10,7 @@
             <h1>Edit Your Recipe</h1>
             <form method="post" class="post-form">
                 {% csrf_token %}
-                {{ form | crispy }}
+                {{ UpdateRecipeForm | crispy }}
                 <input type="submit" value="Update">
             </form>
         </div>
