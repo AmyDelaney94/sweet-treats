@@ -1,36 +1,69 @@
+<!-- TOC --><a name="sweet-treats"></a>
 # Sweet Treats
-Image of the site on different device screen sizes
+<img src="/workspace/sweet-treats/media/readme-images/responsivity.png" alt="image of project responsivness on varying screen sizes">
 
+A link to the deployed website can be found <a href="https://sweet-treat-recipes.herokuapp.com/" alt="link to deployed heroku wedsite">here</a>.
 
-### Table of Contents
+<!-- TOC --><a name="table-of-contents"></a>
+## Table of Contents
+<!-- TOC start -->
+- [Sweet Treats](#sweet-treats)
+  * [Table of Contents](#table-of-contents)
+    + [Wireframe](#wireframe)
+    + [User Experience](#user-experience)
+    + [Project Goals](#project-goals)
+    + [User Stories](#user-stories)
+    + [Wireframe](#wireframe-1)
+    + [Game Features](#game-features)
+    + [Future Features](#future-features)
+    + [Languages Used](#languages-used)
+    + [Technology Used](#technology-used)
+    + [Testing](#testing)
+      - [Validation Testing:](#validation-testing)
+    + [Bugs:](#bugs)
+      - [Fixed Bugs:](#fixed-bugs)
+    + [Deployment:](#deployment)
+    + [References:](#references)
+    + [Acknowledgements](#acknowledgements)
+<!-- TOC end -->
 
-A link to the deployed website can be found here.
-
+<!-- TOC --><a name="wireframe"></a>
 ### Wireframe
 - Diagram of wireframe used to design this project
 
 
+<!-- TOC --><a name="user-experience"></a>
 ### User Experience
+<!-- TOC --><a name="project-goals"></a>
 ### Project Goals
 - The site is easy to navigate and user friendly.
 - 
 - 
 - 
 
+<!-- TOC --><a name="user-stories"></a>
 ### User Stories
 
+<!-- TOC --><a name="wireframe-1"></a>
 ### Wireframe
 - Balsamiq was used to design the wireframes used to plan this project. 
 
-### Game Features
+<!-- TOC --><a name="game-features"></a>
+### Website Features
 
+<!-- TOC --><a name="future-features"></a>
 ### Future Features
+- Given more time I would create the option for the user to create and edit their own user profiles.
+    - As part of this they could add profile pictures and a brief biography about themselves. 
+    - The User profile would also contain a list of recipes created by the user.
 
+<!-- TOC --><a name="languages-used"></a>
 ### Languages Used
 - Python
 - HTML
 - CSS
 
+<!-- TOC --><a name="technology-used"></a>
 ### Technology Used
 - GitPod was used for writing code, committing, and then pushing to GitHub.
 - Github was used to store the project after pushing.
@@ -42,13 +75,18 @@ A link to the deployed website can be found here.
 - Bootstrap - 
 - os -> The os library was imported to create a function to utilise the os.system to clear the terminal. This library was imported to improve the overall user experience and to ensure the terminal is clear between rounds.
 
+<!-- TOC --><a name="testing"></a>
 ### Testing
 
+<!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
 
+<!-- TOC --><a name="bugs"></a>
 ### Bugs:
+<!-- TOC --><a name="fixed-bugs"></a>
 #### Fixed Bugs:
 
+<!-- TOC --><a name="deployment"></a>
 ### Deployment:
 The application has been deployed using Heroku by following these steps:
 
@@ -70,9 +108,11 @@ Go to "Connect to GitHub" section and "Search" the repository to be deployed.
 Click "Connect" next the repository name.
 Choose "Automatic deploys" or "Manual deploys" to deploy your application.
 
+<!-- TOC --><a name="references"></a>
 ### References:
 
 
+<!-- TOC --><a name="acknowledgements"></a>
 ### Acknowledgements
 - First I would like to thank my Partner for his love and support throughout the completion of this project.
 - I would also like to thank my mentor Marcel for his advice and support.
