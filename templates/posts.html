@@ -66,53 +66,54 @@
         <div class="col">
             <hr>
         </div>
-    </div>  
+    </div>
     <div class="row">
-        <div class="col-md-6 card mb-4  mt-3 ">
+        <div class="col-md-6 card mb-4 mt-3">
             <h3>Recipe Details:</h3>
             <div class="card-body">
-                    <p><strong>Preparation Time: </strong>{{ post.preparation_time | safe }}</p>
-                    <p><strong>Serving Size: </strong> {{ post.serving_size | safe }}</p>
-                    <p><strong>Ingredients: </strong> {{ post.ingredients | safe }}</p>
-                    <p><strong>Instructions: </strong> {{ post.instructions | safe }}</p>
+                <p><strong>Preparation Time: </strong>{{ post.preparation_time | safe }}</p>
+                <p><strong>Serving Size: </strong> {{ post.serving_size | safe }}</p>
+                <p><strong>Ingredients: </strong> {{ post.ingredients | safe }}</p>
+                <p><strong>Instructions: </strong> {{ post.instructions | safe }}</p>
             </div>
         </div>
-        <div class="col">
-            <vr>
-        </div>
-        <div class="col-md-4 card mb-4 mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
+
+        <div class="col-6 card border border-info comment">
+            <div class="col-md-6 card mb-4 mt-3">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
-        </div>
-        <div class="col-md-4 card mb-4 mt-3 ">
-            <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment has been posted
+
+            <div class="col-md-6 card mb-4 mt-3">
+                <div class="card-body">
+                    {% if commented %}
+                    <div class="alert alert-success" role="alert">
+                        Your comment has been posted
+                    </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-register btn-lg">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
                 </div>
-                {% else %}
-                {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-register btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
             </div>
         </div>
         <div class="row">
@@ -122,8 +123,10 @@
         </div>
         <div>
             {% if user.is_authenticated and user.id == post.author.id %}
-            <a class="btn user-btn" aria-label="Update your Post" href="{% url 'update_post' post.slug %}" role="button">Edit</a>
-            <a class="btn user-btn" aria-label="Delete your Post" href="{% url 'delete_post' post.slug %}" role="button">Delete</i></a>
+            <a class="btn user-btn" aria-label="Update your Post" href="{% url 'update_post' post.slug %}"
+                role="button">Edit</a>
+            <a class="btn user-btn" aria-label="Delete your Post" href="{% url 'delete_post' post.slug %}"
+                role="button">Delete</i></a>
             {% else %}
             <p>Only the author can update or delete this post!</p>
             {% endif %}
