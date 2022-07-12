@@ -46,7 +46,7 @@
 
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span>
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             {{ post.number_of_likes }}
 
@@ -80,7 +80,7 @@
         <div class="col">
             <vr>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-4 card mb-4 mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
@@ -96,7 +96,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-4 card mb-4 mt-3 ">
             <div class="card-body">
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
@@ -125,7 +125,7 @@
             <a class="btn user-btn" aria-label="Update your Post" href="{% url 'update_post' post.slug %}" role="button">Edit</a>
             <a class="btn user-btn" aria-label="Delete your Post" href="{% url 'delete_post' post.slug %}" role="button">Delete</i></a>
             {% else %}
-            <p>Please login if you want to update or delete your posts!</p>
+            <p>Only the author can update or delete this post!</p>
             {% endif %}
         </div>
     </div>
