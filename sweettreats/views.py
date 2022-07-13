@@ -122,14 +122,6 @@ def create_posts(request):
     return render(request, "create_posts.html", context)
 
 
-# class UpdatePost(UpdateView):
-#     '''
-#     View to update a recipe if user is logged in.
-#     '''
-#     model = Post
-#     template_name = 'update_post.html'
-#     form_class = UpdateRecipeForm
-
 class UpdatePost(UpdateView):
     '''
     View to update a recipe if user is logged in.

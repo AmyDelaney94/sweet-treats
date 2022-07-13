@@ -154,9 +154,9 @@ body {
     color: #23BBBB;
 }
 
-/* .recipe-form {
-    text-align: center;
-} */
+.recipe-form {
+    justify-content: center;
+}
 
 /* About Us Page */
 .about-heading {

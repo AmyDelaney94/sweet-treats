@@ -2,18 +2,18 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container-fluid">
-    <h1 class="recipe-heading">Create Your Recipe Here!</h1>
-</div>
+    <div class="container-fluid">
+        <h1 class="recipe-heading">Create Your Recipe Here!</h1>
+    </div>
 
-{% if user.is_authenticated %}
-<!-- <h3> Create a Recipe Here!</h3> -->
-<p>Posting as: {{ user.username }}</p>
-<form method="post" style="margin-top: 1.3em;" class="col-md-4 card mb-4  mt-3 recipe-form">
-    {% csrf_token %}
-    {{ recipe_form }}
-    <input type="submit" class="btn btn-register btn-lg" value="Submit">
-</form>
+    {% if user.is_authenticated %}
+    <!-- <h3> Create a Recipe Here!</h3> -->
+    <p>Posting as: {{ user.username }}</p>
+    <form method="post" style="margin-top: 1.3em;" class="col-md-4 card mb-4  mt-3 recipe-form">
+        {% csrf_token %}
+        {{ recipe_form }}
+        <input type="submit" class="btn btn-register btn-lg" value="Submit">
+    </form>
 {% endif %}
 
 {% endblock %}

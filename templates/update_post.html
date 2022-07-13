@@ -10,7 +10,7 @@
 
 <form method="post" style="margin-top: 1.3em;" class="col-md-4 card mb-4  mt-3 recipe-form">
     {% csrf_token %}
-    {{ recipe_form }}
+    {{ form }}
     <input type="submit" class="btn btn-register btn-lg" value="Update">
 </form>
 {% endif %}
