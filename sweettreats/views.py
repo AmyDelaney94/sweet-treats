@@ -109,7 +109,7 @@ def create_posts(request):
         if recipe_form.is_valid():
             recipe_form.save()
             messages.success(
-                request, 'Your recipe has been sent for approval.'
+                request, 'Your recipe has been posted to the Recipes page.'
                 )
             return redirect(reverse('home'))
     else:
@@ -121,6 +121,14 @@ def create_posts(request):
 
     return render(request, "create_posts.html", context)
 
+
+# class UpdatePost(UpdateView):
+#     '''
+#     View to update a recipe if user is logged in.
+#     '''
+#     model = Post
+#     template_name = 'update_post.html'
+#     form_class = UpdateRecipeForm
 
 class UpdatePost(UpdateView):
     '''
