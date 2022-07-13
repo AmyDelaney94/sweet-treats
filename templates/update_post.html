@@ -7,12 +7,13 @@
 <div class="container-fluid">
     <h3 class="recipe-heading">Update Your Recipe Here!</h3>
 </div>
-
-<form method="post" style="margin-top: 1.3em;" class="col-md-4 card mb-4  mt-3 recipe-form">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" class="btn btn-register btn-lg" value="Update">
-</form>
+<div class="row recipe-form">
+    <form method="post" style="margin-top: 1.3em;" class="col-md-4 card mx-auto">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="btn btn-register btn-lg" value="Update">
+    </form>
+</div>
 {% endif %}
 
 {% endblock %}
