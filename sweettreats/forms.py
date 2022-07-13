@@ -38,8 +38,10 @@ class CreationForm(forms.ModelForm):
         )
 
         widgets = {
-            'ingredients': SummernoteWidget(),
-            'instructions': SummernoteWidget(),
+            'ingredients': SummernoteWidget(attrs={
+                'summernote': {'width': '350px', 'height': '400px'}}),
+            'instructions': SummernoteWidget(attrs={
+                'summernote': {'width': '350px', 'height': '400px'}}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -63,6 +65,8 @@ class UpdateRecipeForm(forms.ModelForm):
         )
 
         widgets = {
-            'ingredients': SummernoteWidget(),
-            'instructions': SummernoteWidget(),
+            'ingredients': SummernoteWidget(attrs={
+                'summernote': {'width': '350px', 'height': '400px'}}),
+            'instructions': SummernoteWidget(attrs={
+                'summernote': {'width': '350px', 'height': '400px'}}),
         }
