@@ -26,6 +26,14 @@ body {
     background-color: #F9FAFC;
 }
 
+.cupcake-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
 /* Index page */
 .card {
     border: none;
@@ -55,12 +63,12 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 40vh;
     width: 100%;
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #23BBBB;
     color: white;
     position: relative;
 }
@@ -77,11 +85,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+    background: #23BBBB;
 }
 
 .post-link {
@@ -91,7 +95,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: navy;
 }
 
 /* posts page */
@@ -102,13 +106,8 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #fff;
 }
-
-/* .comment {
-    justify-content: space-evenly;
-    
-} */
 
 /* Signup Page */
 .btn-register {
@@ -146,6 +145,7 @@ body {
     border: none;
 }
 
+
 /* Creating Posts */
 .recipe-heading {
     text-align: center;
@@ -163,7 +163,20 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 65px;
-    color: #465362;
+    color: #23BBBB;
+}
+
+.about {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.cupcake {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -3px;
 }
 
 /* Update and Delete Posts */
