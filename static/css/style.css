@@ -9,6 +9,12 @@ body {
     font-weight: 600;
 }
 
+.nav-link:active,
+.nav-link:hover  {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .foot-bg {
     background-color: #23BBBB;
 }
@@ -69,16 +75,6 @@ body {
     overflow: hidden;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #23BBBB;
-}
-
 .post-link {
     text-decoration: none;
     color: #468499;
@@ -97,13 +93,13 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 /* Signup Page */
 .btn-register {
     background-color: #23BBBB;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .btn-register:hover,
@@ -119,7 +115,7 @@ body {
 
 .link:hover,
 .link:active {
-    color: #bb2323;
+    color: #468499;
     text-decoration: underline;
 }
 
@@ -162,13 +158,6 @@ body {
     font-weight: 500;
 }
 
-.about-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
 .cupcake {
     width: 25px;
     height: 25px;
@@ -179,13 +168,13 @@ body {
 
 /* Update and Delete Posts */
 .user-btn{
-    color: #fff;
+    color: #FFFFFF;
     background-color: #23BBBB;
     display:inline-block
 }
 
 .delete {
-    color: #fff;
+    color: #ffffff;
     background-color: #f70909;
 }
 

@@ -1,41 +1,50 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <div class="container-fluid">
     <h1 class="about-heading">About Us</h1>
 </div>
 <div class="container-fluid col-md-8 d-md-block card border border-info">
     <div class="row about card-body">
         <div class="row">
-            <p> <strong>Sweet Treats</strong> is a platform that allows those with a love of
-                baking and all things sweet to share and discover new and exciting
-                recipes.
+            <p> <strong>Sweet Treats</strong> is a place for bakers of all levels, that allows
+                those with a love of baking and all things sweet to share and discover new and exciting
+                recipes. <strong>Sweet Treats</strong> is a place to learn, share, and be inspired to
+                try new things. The aim of this site is to be the home of everyones favourite recipes.
+            </p>
+        </div>
+        <div class="row">
+            <p>
+                By <a style="color:#23BBBB" href="{% url 'account_login' %}"> logging</a> into <strong>Sweet
+                    Treats</strong> you can take
+                advantage of user benefits such as creating and sharing your own recipes with others, commenting and
+                liking posts by other
+                memebers and finding new bakes that you can try at home!
+            </p>
+            <p>
+                Remember; Good things come to those who bake! Take it easy and enjoy the process 
+                <i class="fas fa-heart" style="color:#E84610"></i>
             </p>
         </div>
         <div class="row">
             <h6>Top Tips:</h6>
             <ul>
-                <li>To navigate this site please use the Recipe button or click
+                <li>To navigate this site please use the home button or click
                     <a href="/">
                         <img class="cupcake" aria-label="cupcake logo image"
                             src="https://res.cloudinary.com/amyd/image/upload/t_media_lib_thumb/v1657711691/Carrot-Cupcakes.jpg">
-                    </a>to go back to the home page full of delicious recipes for you to explore!
+                    </a>to go back to the home page where you can explore a variety of delicious recipes!
                 </li>
-                <li> When creating your delicious recipes please use the bullet point
+                <li>When creating your delicious recipes please use the bullet point
                     or numbered list options when filling in the Ingredients and Instructions
                     sections to ensure your post is displayed correctly.
                 </li>
+                <li>To get the most out of this site like your favourites so you can easily find them later!
+                </li>
             </ul>
-        </div>
-        <div class="row">
-            <p>
-                By <a style="color:#23BBBB" href="{% url 'account_login' %}"> logging</a> into <strong>Sweet Treats</strong> you can take 
-                advantage of user benefits such as creating and sharing your own recipes with others, commenting and liking posts by other 
-                memebers and finding new bakes that you can try at home!
-            </p>
-                
-            
         </div>
     </div>
 </div>
+
 {%endblock%}
