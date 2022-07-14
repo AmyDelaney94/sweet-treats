@@ -141,9 +141,10 @@ body {
     color: #468499;
 }
 
-/* .recipe-form {
-    
-} */
+.recipe-form {
+  margin-bottom: 10px;
+  margin-top: 1.3em;
+}
 
 /* About Us Page */
 .about-heading {
@@ -156,6 +157,7 @@ body {
 .about {
     font-family: 'roboto', sans-serif;
     font-weight: 500;
+    margin: 10px;
 }
 
 .cupcake {
@@ -170,7 +172,8 @@ body {
 .user-btn{
     color: #FFFFFF;
     background-color: #23BBBB;
-    display:inline-block
+    display:inline-block;
+    margin-bottom: 10px;
 }
 
 .delete {
@@ -178,3 +181,7 @@ body {
     background-color: #f70909;
 }
 
+.delete-text {
+    display: block;
+    text-align: center;
+}

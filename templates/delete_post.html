@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container-fluid delete-text">
-    <h3 class="delete-heading">Delete {{ post.title }}</h3>
-    <form method="post">
-        {% csrf_token %}
-        <div class="delete-p">
-            <p>Are you sure you want to delete "{{ post.title }}"?</p>
-            <p>All data of this recipe will be permanently deleted. </p>
-        </div>
-        <input type="submit" class="delete" value="Confirm">
-    </form>
+<div class="container-fluid mx-auto delete-text col-sm-6 my-5 mx-1 card-body border border-danger">
+    <div class="row">
+        <h3 class="delete-heading">Deleting {{ post.title }}</h3>
+    </div>
+    <div class="row">
+        <form method="post">
+            {% csrf_token %}
+            <div class="delete-p">
+                <p>Are you sure you want to delete "{{ post.title }}"?</p>
+                <p>All data of this recipe will be permanently deleted. </p>
+            </div>
+            <input type="submit" class="delete btn-lg" value="Delete">
+        </form>
+    </div>
 </div>
 
 {% endblock %}
