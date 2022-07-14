@@ -41,7 +41,11 @@ body {
     position: relative;
 }
 
-.image-flash {
+.card-title {
+   height: 60px;
+}
+
+.name-tag {
     position: absolute;
     bottom: 5%;
     min-width: 30%;
@@ -182,6 +186,11 @@ body {
 }
 
 .delete-text {
-    display: block;
     text-align: center;
+    display: block;
+}
+
+/* Recipe Details Page */
+.comment {
+    justify-content: space-evenly;
 }

@@ -21,12 +21,12 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
-                                <div class="image-flash">
+                                <div class="name-tag">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'posts' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                                <h2 class="card-title text-center mt-1">{{ post.title }}</h2>
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
