@@ -14,9 +14,9 @@
     <link rel="shortcut icon" type="image/jpg" href="{% static 'images/bake.png' %}" />
 
     <!-- Google Fonts  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -37,11 +37,13 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #23BBBB;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand" aria-label="Return to Home Page">Sweet
-                    Treats</span></a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="https://res.cloudinary.com/amyd/image/upload/t_media_lib_thumb/v1657711691/Carrot-Cupcakes.jpg"
+                    class="d-inline-block img-fluid align-text-top cupcake-image" aria-label="cupcake logo" alt="">
+                Sweet Treats
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,7 +51,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Recipes</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}" aria-label="About Us">About Us</a>
@@ -70,14 +72,7 @@
                     </li>
                     {% endif %}
                 </ul>
-
             </div>
-            <a class="navbar-brand" href="/">
-                <div class="cupcake-image">
-                    <img src="https://res.cloudinary.com/amyd/image/upload/t_media_lib_thumb/v1657711691/Carrot-Cupcakes.jpg"
-                        class="img-fluid" aria-label="cupcake logo image">
-                </div>
-            </a>
         </div>
     </nav>
 
@@ -102,7 +97,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer mt-auto py-3 foot-bg">
         <p class="m-0 text-center text-white">Designed by Amy Delaney</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
