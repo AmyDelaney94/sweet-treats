@@ -1,8 +1,13 @@
 <!-- TOC --><a name="sweet-treats"></a>
 # Sweet Treats
-<img src="/workspace/sweet-treats/media/readme-images/responsivity.png" alt="image of project responsivness on varying screen sizes">
+
+Sweet Treats is a website that aims to create an online baking recipe community. This site allows users to share their favourite bakes with others as well as explore the site for new and exciting recipes that they can try at home.
+
+Users can login, post their recipes, comment on posts by other users, edit posts they have previously uploaded, and like posts that have been uploaded by others. 
 
 A link to the deployed website can be found <a href="https://sweet-treat-recipes.herokuapp.com/" alt="link to deployed heroku wedsite">here</a>.
+
+<img src="#" alt="image of project responsivness on varying screen sizes">
 
 <!-- TOC --><a name="table-of-contents"></a>
 ## Table of Contents
@@ -29,7 +34,18 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 
 <!-- TOC --><a name="wireframe"></a>
 ### Wireframe
-- Diagram of wireframe used to design this project
+- Diagrams of wireframe used in the design of this project. 
+
+| Page | Wireframe |
+| --- | --- |
+| Home Page | <img  src="media/wireframes/recipepage.png" alt="home page wireframe"> | 
+| About Page | <img  src="media/wireframes/aboutus.png" alt="about us wireframe"> | 
+| Sign Up Page | <img  src="media/wireframes/signup.png" alt="sign up wireframe"> | 
+| Sign In Page | <img  src="media/wireframes/signin.png" alt="sign in wireframe"> | 
+| Delete Alert | <img  src="media/wireframes/deletealert.png" alt="delete alert wireframe"> | 
+| Medium Screen View | <img  src="media/wireframes/medium.png" alt="medium view wireframe"> | 
+| Medium Screen View | <img  src="media/wireframes/small.png" alt="small view wireframe"> | 
+
 
 
 <!-- TOC --><a name="user-experience"></a>

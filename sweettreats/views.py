@@ -53,7 +53,6 @@ class PostDetail(View):
         '''
             Setting query to display posts and approved comments.
             Comments are displayed in ascending order.
-            Comments must be approved to be displayed.
         '''
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
