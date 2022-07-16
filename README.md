@@ -51,10 +51,10 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 ### User Experience
 <!-- TOC --><a name="project-goals"></a>
 ### Project Goals
+My personal goals for this project are that:
 - The site is easy to navigate and user friendly.
-- 
-- 
-- 
+- The purpose of the site is evident and inviting to users.
+- That users want to craete an account and engage with its content. 
 
 <!-- TOC --><a name="user-stories"></a>
 ### User Stories
@@ -97,14 +97,52 @@ The acceptance criteria I followed when completing this development project was 
 
 As mentioned above this project used a Kaban board, which was set up in my <a href="https://github.com/AmyDelaney94/sweet-treats/projects/1" alt="link to Kanban Board">GitHub Projects here</a>, to help keep track of the work that was left to do,that was in progress and that was completed.
 
-<!-- TOC --><a name="game-features"></a>
-### Website Features
+Examples of how my project progressed through the use of the Kanban board can be seen below.
+| Week | Board |
+| --- | --- |
+| Week 1 | <img  src="media/readme-images/week1.png" alt="week 1 agile"> | 
+| Week 2 | <img  src="media/readme-images/week2.png" alt="week 2 agile"> <img  src="media/readme-images/week2agile.png" alt="week 2 agile">  | 
+| Week 3 | <img  src="media/readme-images/week3.png" alt="week 3 agile"> <img  src="media/readme-images/week3agile.png" alt="week 3 agile">  |
+| Week 4 | <img  src="media/readme-images/week4.png" alt="week 4 agile"> | 
+| Week 5 | <img  src="media/readme-images/week5.png" alt="week 5 agile"> | 
+| Week 6 | <img  src="media/readme-images/week6.png" alt="week 6 agile"> | 
+| Week 7 | <img  src="media/readme-images/week7.png" alt="week 7 agile"> | 
+
+
+<!-- TOC --><a name="current-features"></a>
+### Current Features
+The user stories mentioned above were used to enusre a positive UX was achieved.
+
+| Feature | Details | Example |
+| --- | --- | --- | 
+| Favicon | - The favion image was selected as it | <img  src="media/features/bake.png" alt="favicon image"> | 
+| Header | | |
+| Footer | | |
+| Site Navigation | | |
+| Home Page | | |
+| About Us  | | |
+| Post View  | | |
+| Creating a Comment | | |
+| Creating a Post | | |
+| Update and Delete Options | | |
+| Updating a Post | | |
+| Deleting a Post | | |
+| Account Registration | | |
+| Log in/out | | |
+| Admin Account | | | 
+
+
+
 
 <!-- TOC --><a name="future-features"></a>
 ### Future Features
-- Given more time I would create the option for the user to create and edit their own user profiles.
+Given more time to work on this project the overall scope of the website could be expanded. 
+- User Profiles:
+    - Allow users to create and edit their own user profiles.
     - As part of this they could add profile pictures and a brief biography about themselves. 
-    - The User profile would also contain a list of recipes created by the user.
+    - The User profile would also contain a list of recipes created by the user like an online recipe book.
+- Paginate the comments section of the site to ensure that the page remains user friendly across all device sizes. 
+- Allow users to view other profiles to connect with other bakers. 
 
 <!-- TOC --><a name="languages-used"></a>
 ### Languages Used
