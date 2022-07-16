@@ -115,20 +115,21 @@ The user stories mentioned above were used to enusre a positive UX was achieved.
 
 | Feature | Details | Example |
 | --- | --- | --- | 
-| Favicon | - The favion image was selected as it | <img  src="media/features/bake.png" alt="favicon image"> | 
-| Header | | |
-| Footer | | |
-| Site Navigation | | |
-| Home Page | | |
-| About Us  | | |
+| Favicon | - The favion image was selected to continue with the baking theme of the site. <br/> - The favicon icon is visible in the browser tab and search engine history.<br/> - It adds a unique identifier to the site. | <img  src="media/features/bake.png" alt="favicon image"> | 
+| Header | - The header is fixed at the top of the page which allows the user to scroll the site. <br/> - The colour of #23bbbb was chosen as the main colour throughout the site and is used in the Header with white text which is easily read. | <img  src="media/features/header.png" alt="header image"> |
+| Footer | - The footer also carries the same colour scheme as the header. <br/> - The footer contains social media links with added icons from Font Awesome <br/> - Footer contains a created by and authors name. | <img  src="media/features/footer.png" alt="footer image"> |
+| Site Navigation | - The navigation bar changes depending on user status, with one view if logged in and a second view if logged out. <br/> - The nav bar is responsive on smaller screen sizes it changes to a button with a dropdown list. |<img  src="media/features/nav1.png" alt="logged out nav image"> <img  src="media/features/nav2.png" alt="logged in nav image"> <img  src="media/features/mobilenav.png" alt="mobile view nav image">|
+| Pagination | - To improve UX pagination was added so that each page displays a maximum of 6 posts. | <img  src="media/features/pagination.png" alt="change page button"> | 
+| Home Page | - The Recipes page is the sites landing page. <br/> - It displays 6 posts per page and includes the author along with the number of likes on each post. <br/> - Bootstrap was used to ensure all cards are the same height regardless of recipe title length. <br/> - Date of publising is also displayed on each recipe card. <br/> - The colour theme is continued with the authors name featured on a #23bbbb background. | <img  src="media/features/home1.png" alt="Landing page upper image"> <img  src="media/features/home2.png" alt="landing page lower image"> |
+| About Us  | - Font Awesome was used to add icons to page title. <br/> -Aim and purpose of the page is displayed here. <br/> - Tips for page navigation and log in benefits are also displayed here. <br/> Link to the homepage and signup page are also embedded in the text. | <img  src="media/features/aboutus.png" alt="about page image">|
 | Post View  | | |
-| Creating a Comment | | |
-| Creating a Post | | |
+| Creating a Comment | - Text box is only displayed if user is logged in. <br/> - Once publised the time, date and authors name is published with the comment. |<img  src="media/features/comment.png" alt="comment image"> <img  src="media/features/comment2.png" alt=" unable to comment image"> |
+| Creating a Post | - Logged in user has the ability to create a post. <br/> - All fields must be filled in or a promt appears before it allows user to submit the post. <br/> Summernote Widgets were used for the Ingredients and Instruction sections to allow users to create easy to read posts. <br/> - An option to add an image is also provided. | <img  src="media/features/create1.png" alt="Create a post"> <img  src="media/features/create2.png" alt="submit section of create a post">||
 | Update and Delete Options | | |
 | Updating a Post | | |
 | Deleting a Post | | |
-| Account Registration | | |
-| Log in/out | | |
+| Account Registration | - New users are asked to complete a registration form before continuing to the site. | <img  src="media/features/signup.png" alt="registration image">|
+| Log in/out | Users that are returing have a simplified form to fill in that requires a user name and password. <br/> - A promt appears when logout is selected asking the user to confirm their choice before continuing. | <img  src="media/features/signin.png" alt="log in image"> <img  src="media/features/signout.png" alt="log out image">|
 | Admin Account | | | 
 
 
@@ -142,25 +143,41 @@ Given more time to work on this project the overall scope of the website could b
     - As part of this they could add profile pictures and a brief biography about themselves. 
     - The User profile would also contain a list of recipes created by the user like an online recipe book.
 - Paginate the comments section of the site to ensure that the page remains user friendly across all device sizes. 
+- Reply to comments to further enhance interactivity. 
 - Allow users to view other profiles to connect with other bakers. 
 
 <!-- TOC --><a name="languages-used"></a>
 ### Languages Used
-- Python
-- HTML
-- CSS
+- Python: Language chosen to develop the interaction with the server. 
+- HTML: Markup language used to create the front end web pages.
+- CSS: Styling language used to add custom styling to site.
 
 <!-- TOC --><a name="technology-used"></a>
 ### Technology Used
-- GitPod was used for writing code, committing, and then pushing to GitHub.
-- Github was used to store the project after pushing.
-- Balsamiq was used to create and design the wireframes used in the design of this project.
-- Am I Responsive? was used in order to see responsive design throughout the process.
-- PEP8 online check was used to validate the python code.
-- Heroku was used to deploy the application.
-- Imported libraries 
-- Bootstrap - 
-- os -> The os library was imported to create a function to utilise the os.system to clear the terminal. This library was imported to improve the overall user experience and to ensure the terminal is clear between rounds.
+| Type | Technology | Function |
+| --- | --- | --- | 
+|Framework | Django| python framework used to create backend logic |
+|Framework | Bootstrap5 | CSS Framework for developing mobile-first responsiveness across multiple screen sizes |
+| Library | Django-allauth | Authentication library used to create the user accounts| 
+| Library | Summernote | | WYSIWYG editor that allowed users to edit and personalise posts | 
+| Application | Crispy Forms |  Used to manage Django Forms without having to re-write templates |
+| Application | Psycopg2 | Database driver used to connect to the database to Python code | 
+| Database | SQLite|  used as the database during development|
+| Database | PostgreSQL| The database used to store all the data on deployment site | 
+| Other Resources | Chrome DevTools | Used to debug and view changes | 
+| Other Resources | Balsamiq Wireframes| Chosen to design wireframes during project planning | 
+| Other Resources | LucidCharts |  Used to create models used in the project | 
+| Other Resources | Cloudinary | Image hosting platform used to upload images |
+| Other Resources | Font Awesome | Used for visual icons on the site to enhance UX | 
+| Other Resources | Color-Hex and Color-Hexa | Used to chose colour scheme and ensure colours were complimentary | 
+| Other Resources | Am I Responsive? | Used to see responsive design throughout the process.
+| GitHub | GitHub Projects | Used to visually track the progress of the project | 
+| GitHub | GitHub Issues | Used to create the user stories managed in GitHub Projects | 
+| Host | GitHub | To store the source code and ReadMe for the project | 
+| Host | GitPod | IDE selected to build the project | 
+| Host | Heroku | To Host the deployed website | 
+| Package Manager | Pip3 | Used to install extra software not found in Python Library
+
 
 <!-- TOC --><a name="testing"></a>
 ### Testing
