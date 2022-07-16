@@ -47,7 +47,6 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 | Medium Screen View | <img  src="media/wireframes/small.png" alt="small view wireframe"> | 
 
 
-
 <!-- TOC --><a name="user-experience"></a>
 ### User Experience
 <!-- TOC --><a name="project-goals"></a>
@@ -59,10 +58,44 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 
 <!-- TOC --><a name="user-stories"></a>
 ### User Stories
+As a user I want to:
 
-<!-- TOC --><a name="wireframe-1"></a>
-### Wireframe
-- Balsamiq was used to design the wireframes used to plan this project. 
+- Easily understand the main purpose of the site, so that I can easily use the site.
+- Easily navigate around the site, so that I can easily find content and clearly see where I am on the site.
+- Be provided with a page containing a summary of all available posts so that I can decide what posts I would like to interact with. 
+- Be able to read posts uploaded by other users in full and see any comments related those posts, so I can decide if I want to interact or try the recipe.
+- See the author of posts and comments, so I can interact with them on the site.
+- Sign up to the website, so that I can post my recipes, and then have the option to update and delete at a later date.
+- Sign in to the website, so that I can comment and like posts created by others.
+- Easily log in and log out of my account. 
+- Find links to contact the owner of the site on social media. 
+- See the date a post or comment was created so that I can see any updates or suggestions to recipes.
+- See how many comments are attached to a post before clicking in to view it so that I can decide to if my comment has been made already.
+- See how many likes are on a post without having to enter it in detail.
+- Be able to like and unlike recipes on the site. 
+- Post my own recipes to the site so that I can share with others and receive feedback or suggestions on my recipe.
+- Update and delete my own posts so that I can keep the information up to date or make any adjustments once I have tried a bake. 
+- Comment on my own posts so that I can reply and interact with other users.
+- Comment on posts uploaded by others so that I can engage with the baking community. 
+- Access the site on various devices such as desktop, tablet or mobile to that I can use the site on the go. 
+- Understand that if an error occurs how I can address it.
+- Be notified when my interactions with the site have been successful for example when I have logged in/out sucsessfully or when I have posted or commented on the site. 
+- View a paginated list of posts so I can easily navigate through a list of posts. 
+
+As an Admin I want to: 
+- I can log in to allow management of a supportive and safe baking online communinity, by approving or removing posts and comments if required.
+- I can log in and update or delete objectionable posts and comments if required.
+- Create drafts so that I can return and finish writing content at a later date. 
+- Like and unlike posts so that I can also interact with the sites contents. 
+
+<!-- TOC --><a name="agile-design"></a>
+### Agile Design
+- An Agile Approach was used to develop this site. This was achieved by breaking the project down into smaller tasks. 
+
+To complete the overall aim of the Sweet Treats website concept, 14 issues were documented as specific tasks called User Stories. These User Stories are small sections of the project designed to accomplish a specific goal. 
+The acceptance criteria I followed when completing this development project was that if when completing and testing each User Story, the task was completed sucessfully such as liking a post or logging in and out of the site then I deemed the passing conditions met. Once the User Story was working effectively it was moved across the Kanban board. 
+
+As mentioned above this project used a Kaban board, which was set up in my <a href="https://github.com/AmyDelaney94/sweet-treats/projects/1" alt="link to Kanban Board">GitHub Projects here</a>, to help keep track of the work that was left to do,that was in progress and that was completed.
 
 <!-- TOC --><a name="game-features"></a>
 ### Website Features
