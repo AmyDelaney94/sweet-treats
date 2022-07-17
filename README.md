@@ -134,7 +134,6 @@ The user stories mentioned above were used to enusre a positive UX was achieved.
 
 
 
-
 <!-- TOC --><a name="future-features"></a>
 ### Future Features
 Given more time to work on this project the overall scope of the website could be expanded. 
