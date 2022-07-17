@@ -5,9 +5,9 @@ Sweet Treats is a website that aims to create an online baking recipe community.
 
 Users can login, post their recipes, comment on posts by other users, edit posts they have previously uploaded, and like posts that have been uploaded by others. 
 
-A link to the deployed website can be found <a href="https://sweet-treat-recipes.herokuapp.com/" alt="link to deployed heroku wedsite">here</a>.
+A link to the deployed website can be found <a href="https://sweet-treat-recipes.herokuapp.com/" alt="link to deployed heroku website">here</a>.
 
-<img src="media/readme-images/responsive.png" alt="image of project responsivness on varying screen sizes">
+<img src="media/readme-images/responsive.png" alt="image of project responsiveness on varying screen sizes">
 
 <!-- TOC --><a name="table-of-contents"></a>
 ## Table of Contents
@@ -31,6 +31,7 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
     + [References:](#references)
     + [Acknowledgements](#acknowledgements)
 <!-- TOC end -->
+<br/>
 
 <!-- TOC --><a name="project-design"></a>
 ### Project Design
@@ -49,6 +50,7 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 
 - <a href="https://www.lucidchart.com/" >Lucid Charts</a> was used to design the unique models used in this project.
 <img src="media/wireframes/modelschart.png" alt="lucid chart diagram of models used">
+<br/>
 
 <!-- TOC --><a name="user-experience"></a>
 ### User Experience
@@ -57,7 +59,8 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 My personal goals for this project are that:
 - The site is easy to navigate and user friendly.
 - The purpose of the site is evident and inviting to users.
-- That users want to craete an account and engage with its content. 
+- That users want to create an account and engage with its content. 
+<br/>
 
 <!-- TOC --><a name="user-stories"></a>
 ### User Stories
@@ -69,7 +72,7 @@ As a user I want to:
 - Be able to read posts uploaded by other users in full and see any comments related those posts, so I can decide if I want to interact or try the recipe.
 - See the author of posts and comments, so I can interact with them on the site.
 - Sign up to the website, so that I can post my recipes, and then have the option to update and delete at a later date.
-- Sign in to the website, so that I can comment and like posts created by others.
+- Sign into the website, so that I can comment and like posts created by others.
 - Easily log in and log out of my account. 
 - Find links to contact the owner of the site on social media. 
 - See the date a post or comment was created so that I can see any updates or suggestions to recipes.
@@ -82,23 +85,25 @@ As a user I want to:
 - Comment on posts uploaded by others so that I can engage with the baking community. 
 - Access the site on various devices such as desktop, tablet or mobile to that I can use the site on the go. 
 - Understand that if an error occurs how I can address it.
-- Be notified when my interactions with the site have been successful for example when I have logged in/out sucsessfully or when I have posted or commented on the site. 
+- Be notified when my interactions with the site have been successful for example when I have logged in/out successfully or when I have posted or commented on the site. 
 - View a paginated list of posts so I can easily navigate through a list of posts. 
 
 As an Admin I want to: 
-- I can log in to allow management of a supportive and safe baking online communinity, by approving or removing posts and comments if required.
+- I can log in to allow management of a supportive and safe baking online community, by approving or removing posts and comments if required.
 - I can log in and update or delete objectionable posts and comments if required.
 - Create drafts so that I can return and finish writing content at a later date. 
-- Like and unlike posts so that I can also interact with the sites contents. 
+- Like and unlike posts so that I can also interact with the site's contents. 
+
+<br/>
 
 <!-- TOC --><a name="agile-design"></a>
 ### Agile Design
 - An Agile Approach was used to develop this site. This was achieved by breaking the project down into smaller tasks. 
 
 To complete the overall aim of the Sweet Treats website concept, 14 issues were documented as specific tasks called User Stories. These User Stories are small sections of the project designed to accomplish a specific goal. 
-The acceptance criteria I followed when completing this development project was that if when completing and testing each User Story, the task was completed sucessfully such as liking a post or logging in and out of the site then I deemed the passing conditions met. Once the User Story was working effectively it was moved across the Kanban board. 
+The acceptance criteria I followed when completing this development project was that if when completing and testing each User Story, the task was completed successfully such as liking a post or logging in and out of the site then I deemed the passing conditions met. Once the User Story was working effectively it was moved across the Kanban board. 
 
-As mentioned above this project used a Kaban board, which was set up in my <a href="https://github.com/AmyDelaney94/sweet-treats/projects/1" alt="link to Kanban Board">GitHub Projects here</a>, to help keep track of the work that was left to do,that was in progress and that was completed.
+As mentioned above this project used a Kanban board, which was set up in my <a href="https://github.com/AmyDelaney94/sweet-treats/projects/1" alt="link to Kanban Board">GitHub Projects here</a>, to help keep track of the work that was left to do, that was in progress and that was completed.
 
 Examples of how my project progressed through the use of the Kanban board can be seen below.
 | Week | Board |
@@ -111,31 +116,32 @@ Examples of how my project progressed through the use of the Kanban board can be
 | Week 6 | <img  src="media/readme-images/week6.png" alt="week 6 agile"> | 
 | Week 7 | <img  src="media/readme-images/week7.png" alt="week 7 agile"> | 
 
+<br/>
 
 <!-- TOC --><a name="current-features"></a>
 ### Current Features
-The user stories mentioned above were used to enusre a positive UX was achieved.
+The user stories mentioned above were used to ensure a positive UX was achieved.
 
 | Feature | Details | Example |
 | --- | --- | --- | 
-| Favicon | - The favion image was selected to continue with the baking theme of the site. <br/> - The favicon icon is visible in the browser tab and search engine history.<br/> - It adds a unique identifier to the site. | <img src="media/features/bake.png" alt="favicon image"> | 
+| Favicon | - The favicon image was selected to continue with the baking theme of the site. <br/> - The favicon icon is visible in the browser tab and search engine history.<br/> - It adds a unique identifier to the site. | <img src="media/features/bake.png" alt="favicon image"> | 
 | Header | - The header is fixed at the top of the page which allows the user to scroll the site. <br/> - The colour of #23bbbb was chosen as the main colour throughout the site and is used in the Header with white text which is easily read. | <img src="media/features/header.png" alt="header image"> |
-| Footer | - The footer also carries the same colour scheme as the header. <br/> - The footer contains social media links with added icons from Font Awesome <br/> - Footer contains a created by and authors name. | <img src="media/features/footer.png" alt="footer image"> |
+| Footer | - The footer also carries the same colour scheme as the header. <br/> - The footer contains social media links with added icons from Font Awesome <br/> - Footer contains a created by and author's name. | <img src="media/features/footer.png" alt="footer image"> |
 | Site Navigation | - The navigation bar changes depending on user status, with one view if logged in and a second view if logged out. <br/> - The nav bar is responsive on smaller screen sizes it changes to a button with a dropdown list. |<img  src="media/features/nav1.png" alt="logged out nav image"> <img src="media/features/nav2.png" alt="logged in nav image"> <img src="media/features/mobilenav.png" alt="mobile view nav image">|
 | Pagination | - To improve UX pagination was added so that each page displays a maximum of 6 posts. | <img src="media/features/pagination.png" alt="change page button"> | 
-| Home Page | - The Recipes page is the sites landing page. <br/> - It displays 6 posts per page and includes the author along with the number of likes on each post. <br/> - Bootstrap was used to ensure all cards are the same height regardless of recipe title length. <br/> - Date of publising is also displayed on each recipe card. <br/> - The colour theme is continued with the authors name featured on a #23bbbb background. | <img src="media/features/home1.png" alt="Landing page upper image"> <img src="media/features/home2.png" alt="landing page lower image"> |
+| Home Page | - The Recipes page is the sites landing page. <br/> - It displays 6 posts per page and includes the author along with the number of likes on each post. <br/> - Bootstrap was used to ensure all cards are the same height regardless of recipe title length. <br/> - Date of publishing is also displayed on each recipe card. <br/> - The colour theme is continued with the authors name featured on a #23bbbb background. | <img src="media/features/home1.png" alt="Landing page upper image"> <img src="media/features/home2.png" alt="landing page lower image"> |
 | About Us  | - Font Awesome was used to add icons to page title. <br/> -Aim and purpose of the page is displayed here. <br/> - Tips for page navigation and log in benefits are also displayed here. <br/> Link to the homepage and signup page are also embedded in the text. | <img src="media/features/aboutus.png" alt="about page image">|
-| Post View  | - When a post is selected users can see the author, when it was posted, number of likes and comments and the featured image. <br/>- Logged in users will be able to view the comment box. <br/> - If users are logged in but not the author they do not see the edit and delete options. <br/> - If visitors to the site are not logged in they cannot see the option to leave a comment. | <img src="media/features/post1.png" alt="Recipe view page"> <img src="media/features/post2.png" alt="recipe view alternate image"> <img src="media/features/authoronly.png" alt="Author only comment view"> |
-| Creating a Comment | - Text box is only displayed if user is logged in. <br/> - Once publised the time, date and authors name is published with the comment. |<img src="media/features/comment.png" alt="comment image"> <img src="media/features/comment2.png" alt=" unable to comment image"> |
-| Creating a Post | - Logged in user has the ability to create a post. <br/> - All fields must be filled in or a promt appears before it allows user to submit the post. <br/> Summernote Widgets were used for the Ingredients and Instruction sections to allow users to create easy to read posts. <br/> - An option to add an image is also provided. | <img  src="media/features/create1.png" alt="Create a post"> <img src="media/features/create2.png" alt="submit section of create a post"> | 
+| Post View  | - When a post is selected users can see the author, when it was posted, number of likes and comments and the featured image. <br/>- Logged in users will be able to view the comment box. <br/> - If users are logged in but not the author, they do not see the edit and delete options. <br/> - If visitors to the site are not logged in, they cannot see the option to leave a comment. | <img src="media/features/post1.png" alt="Recipe view page"> <img src="media/features/post2.png" alt="recipe view alternate image"> <img src="media/features/authoronly.png" alt="Author only comment view"> |
+| Creating a Comment | - Text box is only displayed if user is logged in. <br/> - Once published the time, date and authors name is published with the comment. |<img src="media/features/comment.png" alt="comment image"> <img src="media/features/comment2.png" alt=" unable to comment image"> |
+| Creating a Post | - Logged in user has the ability to create a post. <br/> - All fields must be filled in or a prompt appears before it allows user to submit the post. <br/> Summernote Widgets were used for the Ingredients and Instruction sections to allow users to create easy to read posts. <br/> - An option to add an image is also provided. | <img  src="media/features/create1.png" alt="Create a post"> <img src="media/features/create2.png" alt="submit section of create a post"> | 
 | Update and Delete Options | - If the author of a post is logged in they have the option to either edit or delete their post. <br/> - The edit and delete buttons are the same colour theme as the rest of the site and redirect the user to the selected page. |<img src="media/features/editdelete.png" alt="authors options for their posts">|
 | Updating a Post | Logged in author of a post has the ability to Update their post. <br/> - All fields appear pre-populated with original information. <br/> Summernote Widgets are also used for this feature. <br/> - An option to add or change the image is also provided. | <img src="media/features/update1.png" alt="Update a post"> <img src="media/features/update2.png" alt="Update a post">|
 | Deleting a Post | - If the author of a post selects to delete their post they will be asked to confirm again before deletion. |<img src="media/features/deletepostalert.png" alt=" Delete post alert screen"> |
 | Account Registration | - New users are asked to complete a registration form before continuing to the site. | <img src="media/features/signup.png" alt="registration image"> |
-| Log in/out | Users that are returing have a simplified form to fill in that requires a user name and password. <br/> - A promt appears when logout is selected asking the user to confirm their choice before continuing. | <img src="media/features/signin.png" alt="log in image"> <img src="media/features/signout.png" alt="log out image">|
-| Admin Account | - A superuser was created for this project to manage the administration section. <br/> - Admin users have more functionality than regular users and have full CRUD functionality over information such as users, posts and comments. <br/> - Only approved admin users can access this section of the site. It is accessed by assing /admin to the URL home page and signing in. | <img src="media/features/adminview.png" alt="Admin view"> | 
+| Log in/out | Users that are returning have a simplified form to fill in that requires a username and password. <br/> - A prompt appears when logout is selected asking the user to confirm their choice before continuing. | <img src="media/features/signin.png" alt="log in image"> <img src="media/features/signout.png" alt="log out image">|
+| Admin Account | - A superuser was created for this project to manage the administration section. <br/> - Admin users have more functionality than regular users and have full CRUD functionality over information such as users, posts and comments. <br/> - Only approved admin users can access this section of the site. It is accessed by adding /admin to the URL home page and signing in. | <img src="media/features/adminview.png" alt="Admin view"> | 
 
-
+<br/>
 
 <!-- TOC --><a name="future-features"></a>
 ### Future Features
@@ -147,12 +153,14 @@ Given more time to work on this project the overall scope of the website could b
 - Paginate the comments section of the site to ensure that the page remains user friendly across all device sizes. 
 - Reply to comments to further enhance interactivity. 
 - Allow users to view other profiles to connect with other bakers. 
+<br/>
 
 <!-- TOC --><a name="languages-used"></a>
 ### Languages Used
 - Python: Language chosen to develop the interaction with the server. 
 - HTML: Markup language used to create the front end web pages.
 - CSS: Styling language used to add custom styling to site.
+<br/>
 
 <!-- TOC --><a name="technology-used"></a>
 ### Technology Used
@@ -171,7 +179,7 @@ Given more time to work on this project the overall scope of the website could b
 | Other Resources | LucidCharts |  Used to create models used in the project | 
 | Other Resources | Cloudinary | Image hosting platform used to upload images |
 | Other Resources | Font Awesome | Used for visual icons on the site to enhance UX | 
-| Other Resources | Color-Hex and Color-Hexa | Used to chose colour scheme and ensure colours were complimentary | 
+| Other Resources | Color-Hex and Color-Hexa | Used to choose colour scheme and ensure colours were complimentary | 
 | Other Resources | Am I Responsive? | Used to see responsive design throughout the process.
 | GitHub | GitHub Projects | Used to visually track the progress of the project | 
 | GitHub | GitHub Issues | Used to create the user stories managed in GitHub Projects | 
@@ -179,24 +187,51 @@ Given more time to work on this project the overall scope of the website could b
 | Host | GitPod | IDE selected to build the project | 
 | Host | Heroku | To Host the deployed website | 
 | Package Manager | Pip3 | Used to install extra software not found in Python Library
+<br/>
 
 <!-- TOC --><a name="testing"></a>
 ### Testing
+| Feature Tested| Testing Method | Result |  
+| --- | --- | --- |
+| Registration - Blank Field |- Each mandatory field was left blank intentionally||
+| Registration - Incorrect Email Field |||
+| Registration - Common Password ||| 
+| Sign in - Blank Field | - Each mandatory field was left blank intentionally ||
+| Sign in - Incorrect Username Field | - Tested with incorrect spelling, non-capitalised letter||
+| Sign in - Incorrect Password Field | - Tested with incorrect spelling ||
+| Non-Signed in user - like  | - Like button is not activated | | 
+| Non-Signed in user - comment  | - Page does not show post comment option| | 
+| Non-Signed in user - create  | - nav bar does not show create option | | 
+| Signed in user - like  | - Like button is activated | | 
+| Signed in user - comment  | - Page shows post comment option| | 
+| Signed in user - create  | - nav bar shoes create post option | | 
+| Create a post - no image |||
+| Create a post - Blank Fields |||
+| Update a post - not author |||
+| Delete a post - not author |||
+| Update a post - author - Blank Field |||
+| Update a post - author - Change Image |||
+| Delete a post - author | - Testing if alert appears to confirm before deletion. ||
+| Site Alert - sign in |||
+| Site Alert - sign out |- Alert requests user to confirm before logging out of site. ||
+| Site Alert - create post |||
+| Site Alert - publish comment |||
+| About Page - Links | - Testing if signup and home page link are activated |||
 
 <!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
 | Resource Used | Code Tested | Result |  
 | --- | --- | --- |
-| <a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator </a> | style.css | No Errors Found <img src="media/testing/css.png" alt="css testing result"> |
+| <a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator </a> | style.css |Pass -  No Errors Found <img src="media/testing/css.png" alt="css testing result"> |
 | <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | base.html | | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | index.html |No errors found <img src="media/testing/index.png" alt="index.html testing result"> | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | about.html |No errors found <img src="media/testing/about.png" alt="about.html testing result"> | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | index.html |Pass - No errors found <img src="media/testing/index.png" alt="index.html testing result"> | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | about.html |Pass - No errors found <img src="media/testing/about.png" alt="about.html testing result"> | 
 | <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | posts.html | | 
 | <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | create_post.html | | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | delete_post.html | No Errors found <img src="media/testing/delete.png" alt="deleteposts testing result">|
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | delete_post.html |Pass - No Errors found <img src="media/testing/delete.png" alt="deleteposts testing result">|
 | <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | update_post.html | |
 
-
+<br/>
 
 <!-- TOC --><a name="bugs"></a>
 ### Bugs:
@@ -205,8 +240,10 @@ Given more time to work on this project the overall scope of the website could b
 #### Fixed Bugs:
 | Bug | Appearance | Solution |
 | --- | --- | --- | 
+| Cropped Text | <img src="media/readme-images/croppedtext.png" alt="Cropped text bug"> | - On laptops and larger screens the author and posted date was cropped in the masthead section of the Recipe page on posts with longer titles. </br> - This was corrected by increasing the height of the area from 40vh to 45vh. |
+| Double Like | <img src="media/readme-images/doublelike.png" alt="double like bug"> | - On mobile and tablet devices the like symbol appeared twice in error. </br> - This was solved by moving the span to within the if statement. 
 
-
+<br/>
 
 <!-- TOC --><a name="deployment"></a>
 ### Deployment:
@@ -230,25 +267,26 @@ Heroku was used to deploy the site and it was achieved by following the steps be
   12.	Choose "Automatic deploys" or "Manual deploys" to deploy your application.
   <br/>
 - Project Version Control – Git was used to control the versions of the project during development. Changes were added, committed, and  saved using commands such as ‘git add .’ and ‘git commit’, and ‘git push’. Once changes had been committed, they were pushed and stored  on the GitHub repository with the rest of the projects source code. 
+<br/>
 
 <!-- TOC --><a name="references"></a>
 ### References:
 - <a href="https://lucid.app/documents#/documents?folder_id=home" alt="Link to lucid charts site">Lucid Charts</a>
 - <a href="https://stackoverflow.com/questions/53067186/how-to-use-slugs-in-django-url" alt="Link to stack overflow site">Stack Overflow</a> -> Using Slugs in Django
-- <a href="https://www.bbcgoodfood.com/" alt="Link to BBC GoodFoods">BBC Goodfood</a> -> was used for recipe's and corresponding images
+- <a href="https://www.bbcgoodfood.com/" alt="Link to BBC GoodFoods">BBC Goodfood</a> -> was used for recipes and corresponding images
 - <a href="https://www.w3schools.com/bootstrap4/bootstrap_cards.asp" alt="w3Schools bootstrap card tutorial">W3Schools</a> -> Using cards in Bootstrap
-- <a href="https://getbootstrap.com/docs/4.2/components/forms/" alt="Bootstrap Documentation">Boostrap Documentation</a> -> For implementing bootstrap throughout the project
+- <a href="https://getbootstrap.com/docs/4.2/components/forms/" alt="Bootstrap Documentation">Bootstrap Documentation</a> -> For implementing bootstrap throughout the project
 - <a href="https://github.com/summernote/django-summernote" alt="Django Summernote">Django Summernote</a> 
 - <a href="https://github.com/creativetimofficial/material-kit/issues/107">GitHub Source</a> -> Adding Image to nav bar
 - <a href="https://docs.djangoproject.com/en/3.2/ref/contrib/messages/#using-messages-in-views-and-templates" alt="Django Messages Information">Django Messages</a>
 - <a href="https://django-allauth.readthedocs.io/en/latest/" alt="Allauth Documentation">AllAuth Documentation</a>
 - <a href="https://www.youtube.com/c/TheNetNinja" alt="net ninja django tutorials">NetNinja Django Tutorials</a>
 
-
+<br/>
 
 <!-- TOC --><a name="acknowledgements"></a>
 ### Acknowledgements
-- First I would like to thank my Partner for his love and support throughout the completion of this project.
+- First, I would like to thank my Partner for his love and support throughout the completion of this project.
 - I would also like to thank my mentor Marcel for his advice and support.
 - My friends for constantly testing the project.
 - Tutor Assistance for their help and support.
