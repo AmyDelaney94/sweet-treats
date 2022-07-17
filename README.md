@@ -7,7 +7,7 @@ Users can login, post their recipes, comment on posts by other users, edit posts
 
 A link to the deployed website can be found <a href="https://sweet-treat-recipes.herokuapp.com/" alt="link to deployed heroku wedsite">here</a>.
 
-<img src="#" alt="image of project responsivness on varying screen sizes">
+<img src="media/readme-images/responsive.png" alt="image of project responsivness on varying screen sizes">
 
 <!-- TOC --><a name="table-of-contents"></a>
 ## Table of Contents
@@ -182,40 +182,42 @@ Given more time to work on this project the overall scope of the website could b
 
 <!-- TOC --><a name="testing"></a>
 ### Testing
-| Bug | Appearance | Solution |
-| --- | --- | --- | 
-
-
 
 <!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
 
 <!-- TOC --><a name="bugs"></a>
 ### Bugs:
+
 <!-- TOC --><a name="fixed-bugs"></a>
 #### Fixed Bugs:
+| Bug | Appearance | Solution |
+| --- | --- | --- | 
+
+
 
 <!-- TOC --><a name="deployment"></a>
 ### Deployment:
-The application has been deployed using Heroku by following these steps:
-
-Heroku was used to deploy the application.
-
-Commit changes and push them to GitHub.
-Go to the Heroku's website.
-Create an account or select log in.
-From the Heroku dashboard, click on "Create new app".
-Enter the "App name" and "Choose a region" before clicking on "Create app".
-Go to "Config Vars" under the "Settings" tab.
-Click on "Reveals Config Vars" and add the KEY: CREDS and the VALUE stored in creds.json file if needed.
-Add the Config Var, KEY: PORT and VALUE: 8000.
-Go to "Buildpacks" section and click "Add buildpack".
-Select "python" and click "Save changes"
-Add "nodejs" buildpack as well using the same process.
-Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
-Go to "Connect to GitHub" section and "Search" the repository to be deployed.
-Click "Connect" next the repository name.
-Choose "Automatic deploys" or "Manual deploys" to deploy your application.
+Heroku was used to deploy the site and it was achieved by following the steps below:
+  1.	Go to the Heroku's website.
+  2.	Create an account if required or select log in.
+  3.	From the Heroku dashboard, click on the “New” button in top righthand corner then "Create new app".
+  4.	Enter a unique "App name" and "Choose a region" before clicking on "Create app".
+  5.	Go to "Config Vars" under the "Settings" tab.
+  6.	Click on "Reveals Config Vars" and enter the following information:
+	      - CLOUDINARY_URL : add your cloudinary key here.
+        - DATABASE_URL : add the url from postgres database.
+        - SECRET_KEY = a secret key for your app.
+        - PORT : 8000
+        - DISABLE_COLLECTSTATIC = 1 during development (Remove when deploying production!)
+  7.	Go to "Buildpacks" section and click "Add buildpack".
+  8.	Select "/herokupython" and click "Save changes"
+  9.	Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
+  10.	Go to "Connect to GitHub" section and "Search" the repository to be deployed.
+  11.	Click "Connect" next the repository name.
+  12.	Choose "Automatic deploys" or "Manual deploys" to deploy your application.
+  <br/>
+- Project Version Control – Git was used to control the versions of the project during development. Changes were added, committed, and  saved using commands such as ‘git add .’ and ‘git commit’, and ‘git push’. Once changes had been committed, they were pushed and stored  on the GitHub repository with the rest of the projects source code. 
 
 <!-- TOC --><a name="references"></a>
 ### References:

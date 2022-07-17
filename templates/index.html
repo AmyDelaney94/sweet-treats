@@ -17,9 +17,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="#">
+                                    src="#" alt="Recipe Image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Default Image">
                                 {% endif %}
                                 <div class="name-tag">
                                     <p class="author">Author: {{ post.author }}</p>
