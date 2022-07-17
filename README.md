@@ -185,6 +185,18 @@ Given more time to work on this project the overall scope of the website could b
 
 <!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
+| Resource Used | Code Tested | Result |  
+| --- | --- | --- |
+| <a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator </a> | style.css | No Errors Found <img src="media/testing/css.png" alt="css testing result"> |
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | base.html | | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | index.html |No errors found <img src="media/testing/index.png" alt="index.html testing result"> | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | about.html |No errors found <img src="media/testing/about.png" alt="about.html testing result"> | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | posts.html | | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | create_post.html | | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | delete_post.html | No Errors found <img src="media/testing/delete.png" alt="deleteposts testing result">|
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | update_post.html | |
+
+
 
 <!-- TOC --><a name="bugs"></a>
 ### Bugs:
