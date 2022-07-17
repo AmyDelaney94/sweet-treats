@@ -2,11 +2,11 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<!-- Post display codeblock -->
 <div class="masthead">
     <div class="container">
-        <div class="row g-0">
+        <div class="row">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
@@ -14,7 +14,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="#" width="100%">
+                <img src="https://res.cloudinary.com/amyd/image/upload/v1658049660/static/placeholder/placeholder.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -32,25 +32,22 @@
                 </p>
                 <div class="row">
                     <div class="col-2">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'posts_like' post.slug %}" method="Post">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="post_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
-                                {% else %}
-                                <button type="submit" name="post_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
-                                {% endif %}
-
-                            </form>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'posts_like' post.slug %}" method="Post">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="post_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="fas fa-heart"></i></button>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <button type="submit" name="post_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="far fa-heart"></i></button>
                             {% endif %}
-                            {{ post.number_of_likes }}
 
-                        </strong>
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        {{ post.number_of_likes }}
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
