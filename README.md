@@ -14,7 +14,7 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 <!-- TOC start -->
 - [Sweet Treats](#sweet-treats)
   * [Table of Contents](#table-of-contents)
-    + [Wireframe](#wireframe)
+    + [Project Design](#project-design)
     + [User Experience](#user-experience)
     + [Project Goals](#project-goals)
     + [User Stories](#user-stories)
@@ -32,9 +32,10 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
     + [Acknowledgements](#acknowledgements)
 <!-- TOC end -->
 
-<!-- TOC --><a name="wireframe"></a>
-### Wireframe
-- Diagrams of wireframe used in the design of this project. 
+<!-- TOC --><a name="project-design"></a>
+### Project Design
+
+- <a href="https://balsamiq.com/wireframes/">Balsamiq wireframes</a> was used to design the wireframes used in the design phase of this project. 
 
 | Page | Wireframe |
 | --- | --- |
@@ -45,6 +46,8 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 | Delete Alert | <img  src="media/wireframes/deletealert.png" alt="delete alert wireframe"> | 
 | Medium Screen View | <img  src="media/wireframes/medium.png" alt="medium view wireframe"> | 
 | Medium Screen View | <img  src="media/wireframes/small.png" alt="small view wireframe"> | 
+
+- <a href="https://www.lucidchart.com/" >Lucid Charts</a> was used to design the unique models used in this project.
 
 
 <!-- TOC --><a name="user-experience"></a>
@@ -176,7 +179,6 @@ Given more time to work on this project the overall scope of the website could b
 | Host | GitPod | IDE selected to build the project | 
 | Host | Heroku | To Host the deployed website | 
 | Package Manager | Pip3 | Used to install extra software not found in Python Library
-
 
 <!-- TOC --><a name="testing"></a>
 ### Testing
