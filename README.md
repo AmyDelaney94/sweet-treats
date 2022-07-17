@@ -48,7 +48,7 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 | Medium Screen View | <img  src="media/wireframes/small.png" alt="small view wireframe"> | 
 
 - <a href="https://www.lucidchart.com/" >Lucid Charts</a> was used to design the unique models used in this project.
-
+<img src="media/wireframes/modelschart.png" alt="lucid chart diagram of models used">
 
 <!-- TOC --><a name="user-experience"></a>
 ### User Experience
@@ -182,6 +182,10 @@ Given more time to work on this project the overall scope of the website could b
 
 <!-- TOC --><a name="testing"></a>
 ### Testing
+| Bug | Appearance | Solution |
+| --- | --- | --- | 
+
+
 
 <!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
@@ -215,6 +219,17 @@ Choose "Automatic deploys" or "Manual deploys" to deploy your application.
 
 <!-- TOC --><a name="references"></a>
 ### References:
+- <a href="https://lucid.app/documents#/documents?folder_id=home" alt="Link to lucid charts site">Lucid Charts</a>
+- <a href="https://stackoverflow.com/questions/53067186/how-to-use-slugs-in-django-url" alt="Link to stack overflow site">Stack Overflow</a> -> Using Slugs in Django
+- <a href="https://www.bbcgoodfood.com/" alt="Link to BBC GoodFoods">BBC Goodfood</a> -> was used for recipe's and corresponding images
+- <a href="https://www.w3schools.com/bootstrap4/bootstrap_cards.asp" alt="w3Schools bootstrap card tutorial">W3Schools</a> -> Using cards in Bootstrap
+- <a href="https://getbootstrap.com/docs/4.2/components/forms/" alt="Bootstrap Documentation">Boostrap Documentation</a> -> For implementing bootstrap throughout the project
+- <a href="https://github.com/summernote/django-summernote" alt="Django Summernote">Django Summernote</a> 
+- <a href="https://github.com/creativetimofficial/material-kit/issues/107">GitHub Source</a> -> Adding Image to nav bar
+- <a href="https://docs.djangoproject.com/en/3.2/ref/contrib/messages/#using-messages-in-views-and-templates" alt="Django Messages Information">Django Messages</a>
+- <a href="https://django-allauth.readthedocs.io/en/latest/" alt="Allauth Documentation">AllAuth Documentation</a>
+- <a href="https://www.youtube.com/c/TheNetNinja" alt="net ninja django tutorials">NetNinja Django Tutorials</a>
+
 
 
 <!-- TOC --><a name="acknowledgements"></a>
