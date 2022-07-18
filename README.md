@@ -52,6 +52,9 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 <img src="media/wireframes/modelschart.png" alt="lucid chart diagram of models used">
 <br/>
 
+#### Colour Scheme
+- Colours were chosen using <a href="https://www.color-hex.com/color-palette/50108" >Lucid Charts</a> and <a href="https://www.lucidchart.com/" >Lucid Charts</a>
+
 <!-- TOC --><a name="user-experience"></a>
 ### User Experience
 <!-- TOC --><a name="project-goals"></a>
