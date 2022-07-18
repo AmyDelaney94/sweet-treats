@@ -239,6 +239,16 @@ Given more time to work on this project the overall scope of the website could b
 
 <br/>
 
+#### Lighthouse Testing
+- The site was also tested for its <a href="https://web.dev/performance-scoring/"> Lighthouse Performance Score </a>and the results were as follows.
+  - On a desktop screen the home page and about page scored 92 and 99 respectively, the create page result was significantly lower, however this was attributed to Chrome extensions impacting the load time. 
+  - All three pages scored highly in the accessibility, best practices and SEO sections of the performance analysis. 
+<img src="media/testing/lighthousehome.png" alt="Home page result">
+<img src="media/testing/lighthouseabout.png" alt="About page result">
+<img src="media/testing/lighthousecreate.png" alt="Create page result">
+
+<br/>
+
 <!-- TOC --><a name="bugs"></a>
 ### Bugs:
 
