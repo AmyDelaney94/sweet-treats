@@ -27,6 +27,7 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
       - [Validation Testing:](#validation-testing)
     + [Bugs:](#bugs)
       - [Fixed Bugs:](#fixed-bugs)
+      - [Unfixed Bug:](#unfixed-bug)
     + [Deployment:](#deployment)
     + [References:](#references)
     + [Acknowledgements](#acknowledgements)
@@ -158,8 +159,11 @@ Given more time to work on this project the overall scope of the website could b
     - As part of this they could add profile pictures and a brief biography about themselves. 
     - The User profile would also contain a list of recipes created by the user like an online recipe book.
 - Paginate the comments section of the site to ensure that the page remains user friendly across all device sizes. 
-- Reply to comments to further enhance interactivity. 
-- Allow users to view other profiles to connect with other bakers. 
+- Add option to reply to comments to further enhance interactivity. 
+- Allow users to view other profiles to connect with other bakers.
+- Add a cancel button to the create and update recipe pages to prevent user from having to use home or back button.  
+
+
 <br/>
 
 <!-- TOC --><a name="languages-used"></a>
@@ -233,16 +237,24 @@ Given more time to work on this project the overall scope of the website could b
 
 <!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
-| Resource Used | Code Tested | Result |  
-| --- | --- | --- |
-| <a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator </a> | style.css |Pass -  No Errors Found <img src="media/testing/css.png" alt="css testing result"> |
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | base.html | | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | index.html |Pass - No errors found <img src="media/testing/index.png" alt="index.html testing result"> | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | about.html |Pass - No errors found <img src="media/testing/about.png" alt="about.html testing result"> | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | posts.html | | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | create_post.html | | 
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | delete_post.html |Pass - No Errors found <img src="media/testing/delete.png" alt="deleteposts testing result">|
-| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | update_post.html | |
+| Resource Used | Code Tested | Example | Result |  
+| --- | --- | --- | --- | 
+| <a href="https://jigsaw.w3.org/css-validator/validator">W3C CSS Validator </a> | style.css | <img src="media/testing/css.png" alt="css testing result"> | Pass  |
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | base.html | <img src="media/testing/base.png" alt="base.html testing result"> | Pass - Warnings can be ignored as this is the structure of the base.html file. |
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | index.html | <img src="media/testing/index.png" alt="index.html testing result"> | Pass | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | about.html |<img src="media/testing/about.png" alt="about.html testing result"> | Pass  |
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | posts.html | <img src="media/testing/posts.png" alt="posts.html testing result"> | Pass | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | create_post.html | <img src="media/testing/create.png" alt="create.html testing result"> | Pass | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | delete_post.html | <img src="media/testing/delete.png" alt="deleteposts testing result">| Pass  | 
+| <a href="https://validator.w3.org/nu/#textarea">Html Checker</a> | update_post.html | <img src="media/testing/update.png" alt="deleteposts testing result"> | Pass | 
+| <a href="http://pep8online.com/ ">Pep8 Validator </a> | sweet_treats/urls.py | <img src="media/testing/url.png" alt="Url.py validation results"> | Pass |
+| <a href="http://pep8online.com/ ">Pep8 Validator </a> | urls.py | <img src="media/testing/urls.png" alt="urls.py validation results"> | Pass |
+| <a href="http://pep8online.com/ ">Pep8 Validator </a> | models.py | <img src="media/testing/models.png" alt="models.py validation results"> | Pass |
+| <a href="http://pep8online.com/ ">Pep8 Validator </a> | urls.py | <img src="media/testing/forms.png" alt="forms.py validation results"> | Pass |
+| <a href="http://pep8online.com/ ">Pep8 Validator </a> | forms.py | <img src="media/testing/forms.png" alt="forms.py validation results"> | Pass |
+| <a href="http://pep8online.com/ ">Pep8 Validator </a> | apps.py | <img src="media/testing/apps.png" alt="urls.py validation results"> | Pass |
+
+
 
 <br/>
 
@@ -265,6 +277,11 @@ Given more time to work on this project the overall scope of the website could b
 | --- | --- | --- | 
 | Cropped Text | <img src="media/readme-images/croppedtext.png" alt="Cropped text bug"> | - On laptops and larger screens the author and posted date was cropped in the masthead section of the Recipe page on posts with longer titles. <br/> - This was corrected by increasing the height of the area from 40vh to 45vh. |
 | Double Like | <img src="media/readme-images/doublelike.png" alt="double like bug"> | - On mobile and tablet devices the like symbol appeared twice in error. <br/> - This was solved by moving the span to within the if statement. 
+
+<!-- TOC --><a name="unfixed-bug"></a>
+#### Unfixed Bug:
+- When creating a recipe, the user has the option to select the author even though the page states 'posting as X'. I tried removing the select author field however it resulted in an error. This field allows the user to select any name from registered users, but they are then prevented from editing or deleting the post they have created as their name does not match the author name. As a result I have updated the about.html page to instruct users to select their own name from the dropdown menu.
+Given more time I would investiagte this bug further and adjust the forms and models to remove the requirement for the author field to be present. 
 
 <br/>
 
