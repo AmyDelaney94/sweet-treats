@@ -191,32 +191,38 @@ Given more time to work on this project the overall scope of the website could b
 
 <!-- TOC --><a name="testing"></a>
 ### Testing
-| Feature Tested| Testing Method | Result |  
-| --- | --- | --- |
-| Registration - Blank Field |- Each mandatory field was left blank intentionally||
-| Registration - Incorrect Email Field |||
-| Registration - Common Password ||| 
-| Sign in - Blank Field | - Each mandatory field was left blank intentionally ||
-| Sign in - Incorrect Username Field | - Tested with incorrect spelling, non-capitalised letter||
-| Sign in - Incorrect Password Field | - Tested with incorrect spelling ||
-| Non-Signed in user - like  | - Like button is not activated | | 
-| Non-Signed in user - comment  | - Page does not show post comment option| | 
-| Non-Signed in user - create  | - nav bar does not show create option | | 
-| Signed in user - like  | - Like button is activated | | 
-| Signed in user - comment  | - Page shows post comment option| | 
-| Signed in user - create  | - nav bar shoes create post option | | 
-| Create a post - no image |||
-| Create a post - Blank Fields |||
-| Update a post - not author |||
-| Delete a post - not author |||
-| Update a post - author - Blank Field |||
-| Update a post - author - Change Image |||
-| Delete a post - author | - Testing if alert appears to confirm before deletion. ||
-| Site Alert - sign in |||
-| Site Alert - sign out |- Alert requests user to confirm before logging out of site. ||
-| Site Alert - create post |||
-| Site Alert - publish comment |||
-| About Page - Links | - Testing if signup and home page link are activated |||
+| Feature Tested| Testing Method | Example | Result |  
+| --- | --- | --- | --- | 
+| Registration - Blank Field |- Each mandatory field was left blank intentionally to ensure error messages appeared | <img src="media/testing/registrationnameblank.png" alt="Blank name registration"> <img src="media/testing/blankpwsignup.png" alt="Blank password registration">| Pass | 
+| Registration - Invalid Email Field | - An invalid email address was tested to ensure error message appeared| <img src="media/testing/email.png" alt="Invalid email at registration">| Pass | 
+| Registration - Common Password |- A common password was tested to check security | <img src="media/testing/commonpw.png" alt="Common password registration">| Pass | 
+| Registration - Short Password |- A short password was tested to check that an error appears if less than 8 characters entered | <img src="media/testing/shortpw.png" alt="Short password registration">| Pass | 
+| Sign in - Blank Field | - Each mandatory field was left blank intentionally to ensure alert appeared |<img src="media/testing/blanksignin.png" alt="Blank field test">| Pass | 
+| Sign in - Incorrect Username Field | - Tested with incorrect spelling, non-capitalised letter|<img src="media/testing/capstestname.png" alt="Error to show incorrect data entered">| Pass |
+| Sign in - Incorrect Password Field | - Tested with incorrect spelling and capitalisation of some letters to ensure account security |<img src="media/testing/capstestname.png" alt="Error to show incorrect data entered">| Pass |
+| Non-Signed in user - like  | - Like button is not activated | <img src="media/testing/inactivelike.png" alt="Inactive Like Button"> | Pass |  
+| Non-Signed in user - comment  | - Page does not show post comment option |<img src="media/features/comment2.png" alt=" unable to comment image"> | Pass |
+| Non-Signed in user - create  | - nav bar does not show create option |<img src="media/testing/loggedoutnav.png" alt="No Create Post option in nav bar"> | Pass | 
+| Signed in user - like  | - Like button is activated | <img src="media/testing/likeactive.png" alt="Like button activated"> | Pass | 
+| Signed in user - comment  | - Page shows post comment option| <img src="media/features/post2.png" alt="Option to add comment image">| Pass |
+| Signed in user - create  | - nav bar shows create post option | <img src="media/testing/loggedinnav.png" alt="User can create a post"> | Pass | 
+| Create a post - no image |- This was tested with no image being uploaded by the user creating the post to ensure that the placeholder image successfully posted. | <img src="media/testing/placeholderimage.png" alt="placeholder image successfully posted"> | Pass |
+| Create a post - Blank Fields |- This was tested with multiple times with one field being left blank each time. Pass criteria is that alert appears to prevent successful posting until all fields have been completed | <img src="media/testing/blankfieldtest.png" alt="Alert if any blank field detected"> | Pass |
+| Update a post - not author | - If user is not the author of the post edit and delete options should not be available to them |<img src="media/features/authoronly.png" alt="Author only comment view"> | Pass |
+| Delete a post - not author |- If user is not the author of the post edit and delete options should not be available to them |<img src="media/features/authoronly.png" alt="Author only comment view"> | Pass |
+| Update a post - author - Blank Field | - This was tested with multiple times with one field being left blank each time. Pass criteria is that alert appears to prevent successful posting until all fields have been completed | <img src="media/testing/blankfieldtest.png" alt="Alert if any blank field detected"> | Pass |
+| Update a post - author - Pre-populated Data | - When update is selected all data from the original post should be pre-populated |<img src="media/features/update1.png" alt="Update a post"> <img src="media/features/update2.png" alt="Update a post">| Pass |
+| Update a post - author - Change Image | - When updating a post the user has the option to change the image that they have selected. The page displays the current image name and if any new image has been uploaded | <img src="media/features/update2.png" alt="Update a post">| Pass
+| Update and Delete options - author | - If user is author of post edit and delete options should be available to them | <img src="media/features/editdelete.png" alt="authors options for their posts"> | Pass | 
+| Delete a post - author | - Testing if alert appears to confirm before deletion. | <img src="media/features/deletepostalert.png" alt="Alert to confirm deletion"> | Pass |
+| Site Alert - sign in | Alert to confirm successful signing in. | <img src="media/testing/signinalert.png" alt="sign in alert image"> | Pass |
+| Site Alert - sign out |- Alert requests user to confirm before logging out of site. | <img src="media/features/signout.png" alt="log out image"> | Pass |
+| Site Alert - sign out |- Alert to confirm successful signing out. | <img src="media/testing/signoutalert.png" alt="sign out alert image"> | Pass |
+| Site Alert - create post |- Alert to confirm successful post creation. | <img src="media/testing/recipealert.png" alt="recipe posted alert image"> | Pass |
+| Site Alert - publish comment | - Page shows comment posted complete. | <img src="media/testing/commentposted.png" alt="Comment successfully posted to site"> | Pass |
+| About Page - Links | - Testing if signup and home page link are activated. Both of these links are active and take the user to the correct location on the site when selected. | <img src="media/features/aboutus.png" alt="about page image">| Pass | 
+| Admin CRUD functionality | - The admin account has access to create, update and delete posts | <img src="media/testing/adminedit.png" alt="Admin edit complete"> <img src="media/features/adminview.png" alt="Admin view">| Pass |
+| Admin - restricted access | - Only the admin account can log into the admin view panel. | <img src="media/testing/adminauth.png" alt="Admin logging auth"> | Pass |
 
 <!-- TOC --><a name="validation-testing"></a>
 #### Validation Testing:
