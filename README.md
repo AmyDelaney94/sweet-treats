@@ -50,10 +50,14 @@ A link to the deployed website can be found <a href="https://sweet-treat-recipes
 
 - <a href="https://www.lucidchart.com/" >Lucid Charts</a> was used to design the unique models used in this project.
 <img src="media/wireframes/modelschart.png" alt="lucid chart diagram of models used">
+
 <br/>
 
 #### Colour Scheme
-- Colours were chosen using <a href="https://www.color-hex.com/color-palette/50108" >Lucid Charts</a> and <a href="https://www.lucidchart.com/" >Lucid Charts</a>
+- Colours were chosen using <a href="https://www.color-hex.com/color-palette/50108" >Color Hex</a> was used to find matching colours to ensure a visually appealing colour scheme. 
+<img src="media/readme-images/colourpallet.png" alt="Colour pallet for matching colours to base theme"><img src="media/readme-images/colourscheme.png" alt="Colour pallet for matching colours to base theme">
+
+<br/>
 
 <!-- TOC --><a name="user-experience"></a>
 ### User Experience
@@ -259,8 +263,8 @@ Given more time to work on this project the overall scope of the website could b
 #### Fixed Bugs:
 | Bug | Appearance | Solution |
 | --- | --- | --- | 
-| Cropped Text | <img src="media/readme-images/croppedtext.png" alt="Cropped text bug"> | - On laptops and larger screens the author and posted date was cropped in the masthead section of the Recipe page on posts with longer titles. </br> - This was corrected by increasing the height of the area from 40vh to 45vh. |
-| Double Like | <img src="media/readme-images/doublelike.png" alt="double like bug"> | - On mobile and tablet devices the like symbol appeared twice in error. </br> - This was solved by moving the span to within the if statement. 
+| Cropped Text | <img src="media/readme-images/croppedtext.png" alt="Cropped text bug"> | - On laptops and larger screens the author and posted date was cropped in the masthead section of the Recipe page on posts with longer titles. <br/> - This was corrected by increasing the height of the area from 40vh to 45vh. |
+| Double Like | <img src="media/readme-images/doublelike.png" alt="double like bug"> | - On mobile and tablet devices the like symbol appeared twice in error. <br/> - This was solved by moving the span to within the if statement. 
 
 <br/>
 
