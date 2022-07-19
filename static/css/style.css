@@ -175,7 +175,13 @@ body {
     border-radius: 50%;
     overflow: hidden;
     margin-top: -3px;
+    text-decoration: none;
 }
+
+/* a.about-cupcake > img {
+    text-decoration: none;
+} */
+
 
 /* Update and Delete Posts */
 .user-btn{
